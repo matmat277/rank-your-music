@@ -11,7 +11,7 @@ Para entender as regras de negócio, o escopo e a arquitetura técnica da aplica
 
 ## 📄 Product Requirements Document (PRD) - Visão geral, atores e histórias de usuário.
 - [🛠️ Especificação Técnica (PRD)](https://github.com/matmat277/rank-your-music/blob/main/docs/prd.md)
-- [Arquitetura do sistema (architecture)](https://github.com/matmat277/rank-your-music/blob/main/docs/prd.md)
+- [Arquitetura do sistema (architecture)](https://github.com/matmat277/rank-your-music/blob/main/docs/architecture.md)
 
 # 🎨 Design 
 
