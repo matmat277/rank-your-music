@@ -1,4 +1,4 @@
-# 🎶rank-your-music🎶
+# 🎶Rank-your-music🎶
 Website de listagem de músicas por ordem de preferência própria do usuário.
 
 
