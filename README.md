@@ -10,9 +10,10 @@ O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript e o backen
 Para entender as regras de negócio, o escopo e a arquitetura técnica da aplicação, consulte os documentos abaixo:
 
 ## 📄 Product Requirements Document (PRD) - Visão geral, atores e histórias de usuário.
-🛠️ Especificação Técnica (Tech Spec) - Diagrama de banco de dados (DER), dicionário de dados e rotas da API (JSON Server).
+- [🛠️ Especificação Técnica (PRD)](https://github.com/matmat277/rank-your-music/blob/main/docs/prd.md)
+- [Arquitetura do sistema (architecture)](https://github.com/matmat277/rank-your-music/blob/main/docs/prd.md)
 
-🎨 Design // (add links here)
+# 🎨 Design 
 
 🎨 Design System - Identidade visual
 
