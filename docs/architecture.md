@@ -13,6 +13,7 @@ A aplicação utiliza o **JSON Server** como API local simulada para os dados pr
 - **Preprocessador CSS:** Sass/SCSS v1.85.0+.
 - **JavaScript:** ES6+ Vanilla JS + jQuery v3.7.1.
 - **API Fake Local:** JSON Server.
+- **API pública externa:** MusicBrainz API Web Service v2 + Cover art Archive API (Associada a Musicbrainz MBIDs)
 ---
 
 ## 2. Modelo de Dados (Diagrama ER)
