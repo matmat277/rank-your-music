@@ -5,7 +5,7 @@ Este documento detalha a arquitetura funcional, o modelo de dados, a estrutura d
 
 O **Rank Your Music** é uma aplicação web para que usuários possam criar e gerenciar rankings personalizados de músicas, organizando-as de acordo com suas próprias preferências. O sistema não é uma plataforma de streaming: seu objetivo principal é permitir que o usuário **organize, classifique e expresse suas preferências musicais**.
 
-A aplicação utiliza o **JSON Server** como API local simulada para os dados próprios do sistema. Para pesquisa e identificação de músicas, as principais APIs externas utilizadas são a **MusicBrainz API** e a **Cover Art Archive API**. A MusicBrainz fornece metadados musicais e identificadores como MBIDs, enquanto o Cover Art Archive fornece as imagens de capa associadas aos releases do MusicBrainz. citeturn360058search0turn462904search1
+A aplicação utiliza o **JSON Server** como API local simulada para os dados próprios do sistema. Para pesquisa e identificação de músicas, as principais APIs externas utilizadas são a **MusicBrainz API** e a **Cover Art Archive API**. A MusicBrainz fornece metadados musicais e identificadores como MBIDs, enquanto o Cover Art Archive fornece as imagens de capa associadas aos releases do MusicBrainz.
 
 ## 1. Stack Tecnológica e Versões
 
