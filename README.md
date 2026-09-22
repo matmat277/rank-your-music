@@ -26,8 +26,8 @@ Para entender as regras de negócio, o escopo e a arquitetura técnica da aplica
  - Framework CSS: Bootstrap (Grid responsivo, utilitários de layout e componentes JS nativos, além de ser o framework mais usado do mundo).
  - Preprocessador CSS: SaSS/SCSS (Escolhido para modularizar o CSS e sobreescrever as variáveis nativas do bootstrap, permitindo aplcar fielmente o design desenhado no Figma).
  - JavaScript: ES6+ Vanilla JS + jQuery (Utilizads em conjunto para a manipulação dinâmica do DOM, controle de fluxo do formulário multi-etapas, gerenciamento de modais e requisições assincronas).
- - API Fake Local: JSON server (Empregado como API Fake local para simular a persistência de dados dos cadastros de usuários e suas preferências táticas na coleção `user`
- - API externa pública: MusicBrainz + Cover art Archive
+ - API Fake Local: JSON server (Empregado como API Fake local para simular a persistência de dados dos cadastros de usuários e suas preferências táticas na coleção `user`).
+ - API externa pública: MusicBrainz + Cover art Archive (API para coleta de dados ou informações sobre as músicas requisitadas, cover art é parte da API de MusicBrainz que somente localiza imagem do álbum/música).
 
 
 ## ✅ Checklist | Indicadores de Desempenho (ID) dos Resultados de Aprendizagem (RA)
@@ -54,11 +54,11 @@ Para entender as regras de negócio, o escopo e a arquitetura técnica da aplica
 
 #### RA3 - Aplicar ferramentas para otimização do processo de desenvolvimento web.
 
-- [ ] ID 15 - Configura ambiente com Node.js e NPM para gerenciamento de pacotes e dependências.
-- [ ] ID 16 - Utiliza boas práticas de versionamento no Git/GitHub (branch main ou branches específicos, uso de .gitignore).
-- [ ] ID 17 - Mantém um README.md padronizado, conforme template da disciplina, com checklist preenchido.
-- [ ] ID 18 - Organiza arquivos do projeto de forma modular, seguindo padrão de exemplo fornecido.
-- [ ] ID 19 - Configura linters e formatadores (ESLint, Prettier) para manter qualidade e padronização do código.
+- [ x ] ID 15 - Configura ambiente com Node.js e NPM para gerenciamento de pacotes e dependências.
+- [ x ] ID 16 - Utiliza boas práticas de versionamento no Git/GitHub (branch main ou branches específicos, uso de .gitignore).
+- [ x ] ID 17 - Mantém um README.md padronizado, conforme template da disciplina, com checklist preenchido.
+- [ x ] ID 18 - Organiza arquivos do projeto de forma modular, seguindo padrão de exemplo fornecido.
+- [ x ] ID 19 - Configura linters e formatadores (ESLint, Prettier) para manter qualidade e padronização do código.
 
 #### RA4 - Aplicar bibliotecas de funções e componentes em JavaScript para aprimorar a interatividade de páginas web.
 
