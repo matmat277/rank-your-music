@@ -17,7 +17,7 @@ Para entender as regras de negócio, o escopo e a arquitetura técnica da aplica
 
 🎨 Design System - Identidade visual
 
-🖼️ Protótipo no Figma - [Telas interativas da aplicação.](https://www.figma.com/proto/nHBtWB00QHD7x9OkE3OnWS/Rank-your-music?node-id=8-412&t=KHuAm6fWMQ7R8NZ1-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=8%3A412&show-proto-sidebar=1&fuid=1500934227224952569)
+🖼️ Protótipo no Figma - [Telas interativas da aplicação.](https://www.figma.com/proto/nHBtWB00QHD7x9OkE3OnWS/Rank-your-music?node-id=8-412&t=8w7p30jVC8LTuLHp-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=8%3A412&show-proto-sidebar=1)
 
 🌐 Site em Produção - GitHub Pages
 
