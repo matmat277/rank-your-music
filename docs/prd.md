@@ -1,4 +1,4 @@
-# Product Requirements Document (PRD) || Rank your music
+ # Product Requirements Document (PRD) || Rank your music
 Mateus Neckel de Faveri || Projeto Rank your music
 
 ## 1. Visão geral e Objetivos

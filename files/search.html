@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rank Your Music - Search Music</title>
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="page.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- BEGIN: Main Header -->
+  <header class="w-100 bg-white border-bottom border-light-subtle sticky-top z-3">
+    <div class="container-xl d-flex align-items-center justify-content-between py-2.5">
+      
+      <!-- Brand & Navigation -->
+      <div class="d-flex align-items-center gap-4">
+        <a href="dashboard.html" class="d-flex align-items-center gap-2 text-decoration-none">
+          <div class="navbar-brand-logo">
+            <i class="bi bi-disc-fill"></i>
+          </div>
+          <span class="fw-bold fs-6 text-dark tracking-tight">Rank Your Music</span>
+        </a>
+
+        <!-- Top Navigation -->
+        <nav class="d-none d-md-flex align-items-center gap-1">
+          <a class="nav-link px-3 py-2 text-secondary" href="dashboard.html">
+            <i class="bi bi-collection-play me-1"></i> My Rankings
+          </a>
+          <a class="nav-link active-custom px-3 py-2 text-brand" href="search.html">
+            <i class="bi bi-search me-1"></i> Search &amp; Add
+          </a>
+        </nav>
+      </div>
+
+      <!-- Right Header Controls -->
+      <div class="d-flex align-items-center gap-3">
+        <!-- Quick Global Search -->
+        <div class="d-none d-sm-block position-relative" style="width: 220px;">
+          <input type="search" class="form-control form-control-sm rounded-pill ps-4 bg-light border-light-subtle" placeholder="Busca global rápida...">
+          <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-2.5 text-muted small"></i>
+        </div>
+
+        <!-- Add Ranking Button -->
+        <a href="dashboard.html" class="btn btn-brand btn-sm d-none d-sm-inline-flex align-items-center gap-1.5 px-3 py-1.5 shadow-sm">
+          <i class="bi bi-plus-lg"></i>
+          <span>Novo Ranking</span>
+        </a>
+
+        <!-- User Profile Dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-link p-0 text-decoration-none dropdown-toggle d-flex align-items-center gap-2 border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Julian V." class="rounded-circle border border-2 border-secondary-subtle" width="34" height="34">
+            <span class="d-none d-lg-inline text-dark small fw-semibold">Julian V.</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm border-light-subtle small">
+            <li class="px-3 py-1 text-muted" style="font-size: 11px;">CONECTADO COMO</li>
+            <li class="px-3 py-1 fw-bold text-dark">Julian Rey del Musica</li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="dashboard.html"><i class="bi bi-folder2-open me-2 text-muted"></i>Meus Rankings</a></li>
+            <li><a class="dropdown-item" href="ranking-detail.html"><i class="bi bi-card-checklist me-2 text-muted"></i>Ranking Ativo</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Encerrar Sessão</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <!-- END: Main Header -->
+
+  <!-- BEGIN: Context Alert Banner -->
+  <div class="bg-brand-soft border-bottom border-brand-subtle py-2 px-3">
+    <div class="container-xl d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-1 small text-brand">
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge rounded-circle bg-brand text-white p-1 d-inline-flex align-items-center justify-content-center" style="width: 18px; height: 18px;">
+          <i class="bi bi-check" style="font-size: 12px;"></i>
+        </span>
+        <span>
+          Ranking de destino ativo: <strong class="fw-bold text-dark">All-Time Essential Electronic</strong> (14 faixas atuais)
+        </span>
+      </div>
+      <a href="ranking-detail.html" class="text-brand fw-semibold text-decoration-underline small d-inline-flex align-items-center gap-1">
+        <span>Visualizar ranking de destino</span>
+        <i class="bi bi-arrow-up-right small"></i>
+      </a>
+    </div>
+  </div>
+  <!-- END: Context Alert Banner -->
+
+  <!-- BEGIN: Search Header Section -->
+  <section class="bg-white border-bottom border-light-subtle py-4 px-3 shadow-xs">
+    <div class="container-xl">
+      <h1 class="h4 fw-bold text-dark mb-1">Mecanismo de Pesquisa de Músicas</h1>
+      <p class="text-muted small mb-3">Consulte registros musicais globais (APIs Discogs, MusicBrainz e Spotify) para indexar lançamentos diretamente em suas listas.</p>
+
+      <!-- Search Input Toolbar -->
+      <div class="row g-2 align-items-stretch">
+        <div class="col-12 col-md-7 col-lg-8">
+          <div class="position-relative">
+            <input type="text" id="searchInput" class="form-control form-control-sm py-2 ps-4 pe-5 rounded-3 border-light-subtle" placeholder="Pesquise por artista, álbum, faixa ou número de catálogo..." value="Boards of Canada, Aphex Twin">
+            <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-2.5 text-muted small"></i>
+            <button class="btn btn-sm btn-link position-absolute top-50 end-0 translate-middle-y me-2 text-muted p-0" type="button" onclick="document.getElementById('searchInput').value=''">
+              <i class="bi bi-x-circle-fill"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 col-lg-2">
+          <select class="form-select form-select-sm py-2 rounded-3 border-light-subtle text-secondary fw-medium">
+            <option>Todas as Fontes</option>
+            <option>Discogs Database</option>
+            <option>MusicBrainz Core</option>
+            <option>Spotify Catalog</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-2 col-lg-2">
+          <button class="btn btn-brand btn-sm py-2 w-100 rounded-3 d-flex align-items-center justify-content-center gap-1.5 shadow-sm" type="button">
+            <i class="bi bi-search"></i>
+            <span>Pesquisar</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter Badges / Tags -->
+      <div class="d-flex flex-wrap align-items-center gap-2 mt-3 small text-muted">
+        <span class="fw-semibold text-dark">Filtros:</span>
+        <span class="badge bg-brand-soft text-brand border border-brand-subtle rounded-pill py-1 px-2.5">
+          Formato: Todos os Formatos <a href="#" class="text-brand text-decoration-none ms-1">&times;</a>
+        </span>
+        <span class="badge bg-light text-secondary border border-light-subtle rounded-pill py-1 px-2.5">
+          Ano: 1980 - Presente
+        </span>
+        <span class="badge bg-light text-secondary border border-light-subtle rounded-pill py-1 px-2.5">
+          Gênero Principal: Electronic / Ambient
+        </span>
+        <a href="#" class="text-brand small text-decoration-none fw-medium ms-1">Limpar todos</a>
+      </div>
+    </div>
+  </section>
+  <!-- END: Search Header Section -->
+
+  <!-- BEGIN: Main Content Area (Two Columns) -->
+  <main class="flex-grow-1 container-xl py-4">
+    <div class="row g-4 align-items-start">
+
+      <!-- LEFT COLUMN: Search Results (approx 7 cols) -->
+      <section class="col-12 col-lg-7">
+        
+        <!-- Results Header -->
+        <div class="d-flex align-items-center justify-content-between pb-2 mb-3 border-bottom border-light-subtle">
+          <div class="small fw-bold text-muted text-uppercase" style="letter-spacing: 0.5px;">
+            Resultados Encontrados <span class="text-brand fw-bolder">(4 Itens)</span>
+          </div>
+          <div class="d-flex align-items-center gap-1 small text-muted">
+            <span>Ordenar:</span>
+            <select class="form-select form-select-sm border-0 py-0 text-dark fw-semibold" style="width: auto;">
+              <option>Relevância</option>
+              <option>Ano (Mais recente)</option>
+              <option>Ano (Mais antigo)</option>
+              <option>Nota Média</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Result Card 1: Selected Ambient Works 85-92 -->
+        <div class="custom-card p-3 mb-3 border border-brand-subtle d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
+          <div class="d-flex align-items-center gap-3 min-w-0">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=140&q=80" alt="Selected Ambient Works 85-92" class="album-art-md flex-shrink-0">
+            <div class="min-w-0">
+              <div class="d-flex align-items-center gap-2 mb-0.5">
+                <h2 class="h6 fw-bold text-dark text-truncate mb-0">Selected Ambient Works 85-92</h2>
+                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle py-0 px-1.5" style="font-size: 10px;">LP</span>
+              </div>
+              <p class="text-muted small text-truncate mb-1">Aphex Twin • Apollo Records (1992)</p>
+              <div class="d-flex align-items-center gap-2 small text-muted" style="font-size: 11px;">
+                <span>13 Faixas</span>
+                <span>•</span>
+                <span>Ambient Techno / IDM</span>
+                <span>•</span>
+                <span class="text-brand fw-bold">Avg: 9.6</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-brand btn-sm text-nowrap d-inline-flex align-items-center gap-1 px-3 py-1.5 flex-shrink-0" onclick="selectTrack('Selected Ambient Works 85-92', 'Aphex Twin (1992)', 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=140&q=80', 9.5)">
+            <i class="bi bi-plus-lg"></i>
+            <span>Adicionar</span>
+          </button>
+        </div>
+
+        <!-- Result Card 2: Untrue -->
+        <div class="custom-card p-3 mb-3 d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
+          <div class="d-flex align-items-center gap-3 min-w-0">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=140&q=80" alt="Untrue" class="album-art-md flex-shrink-0">
+            <div class="min-w-0">
+              <div class="d-flex align-items-center gap-2 mb-0.5">
+                <h2 class="h6 fw-bold text-dark text-truncate mb-0">Untrue</h2>
+                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle py-0 px-1.5" style="font-size: 10px;">LP</span>
+              </div>
+              <p class="text-muted small text-truncate mb-1">Burial • Hyperdub (2007)</p>
+              <div class="d-flex align-items-center gap-2 small text-muted" style="font-size: 11px;">
+                <span>13 Faixas</span>
+                <span>•</span>
+                <span>Future Garage / Dubstep</span>
+                <span>•</span>
+                <span class="text-brand fw-bold">Avg: 9.4</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-brand btn-sm text-nowrap d-inline-flex align-items-center gap-1 px-3 py-1.5 flex-shrink-0" onclick="selectTrack('Untrue', 'Burial (2007)', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=140&q=80', 9.4)">
+            <i class="bi bi-plus-lg"></i>
+            <span>Adicionar</span>
+          </button>
+        </div>
+
+        <!-- Result Card 3: Geogaddi -->
+        <div class="custom-card p-3 mb-3 d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
+          <div class="d-flex align-items-center gap-3 min-w-0">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=140&q=80" alt="Geogaddi" class="album-art-md flex-shrink-0">
+            <div class="min-w-0">
+              <div class="d-flex align-items-center gap-2 mb-0.5">
+                <h2 class="h6 fw-bold text-dark text-truncate mb-0">Geogaddi</h2>
+                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle py-0 px-1.5" style="font-size: 10px;">LP</span>
+              </div>
+              <p class="text-muted small text-truncate mb-1">Boards of Canada • Warp Records (2002)</p>
+              <div class="d-flex align-items-center gap-2 small text-muted" style="font-size: 11px;">
+                <span>23 Faixas</span>
+                <span>•</span>
+                <span>IDM / Hauntology / Downtempo</span>
+                <span>•</span>
+                <span class="text-brand fw-bold">Avg: 9.3</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-brand btn-sm text-nowrap d-inline-flex align-items-center gap-1 px-3 py-1.5 flex-shrink-0" onclick="selectTrack('Geogaddi', 'Boards of Canada (2002)', 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=140&q=80', 8.9)">
+            <i class="bi bi-plus-lg"></i>
+            <span>Adicionar</span>
+          </button>
+        </div>
+
+        <!-- Result Card 4: Music Has the Right to Children -->
+        <div class="custom-card p-3 mb-3 d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
+          <div class="d-flex align-items-center gap-3 min-w-0">
+            <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=140&q=80" alt="Music Has the Right to Children" class="album-art-md flex-shrink-0">
+            <div class="min-w-0">
+              <div class="d-flex align-items-center gap-2 mb-0.5">
+                <h2 class="h6 fw-bold text-dark text-truncate mb-0">Music Has the Right to Children</h2>
+                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle py-0 px-1.5" style="font-size: 10px;">LP</span>
+              </div>
+              <p class="text-muted small text-truncate mb-1">Boards of Canada • Warp Records (1998)</p>
+              <div class="d-flex align-items-center gap-2 small text-muted" style="font-size: 11px;">
+                <span>18 Faixas</span>
+                <span>•</span>
+                <span>Downtempo / Chillout / IDM</span>
+                <span>•</span>
+                <span class="text-brand fw-bold">Avg: 9.7</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-brand btn-sm text-nowrap d-inline-flex align-items-center gap-1 px-3 py-1.5 flex-shrink-0" onclick="selectTrack('Music Has the Right to Children', 'Boards of Canada (1998)', 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=140&q=80', 9.5)">
+            <i class="bi bi-plus-lg"></i>
+            <span>Adicionar</span>
+          </button>
+        </div>
+
+        <!-- Pagination -->
+        <div class="d-flex align-items-center justify-content-between pt-3 border-top border-light-subtle small text-muted">
+          <span>Mostrando 1 a 4 de 4 resultados</span>
+          <nav aria-label="Page navigation">
+            <ul class="pagination pagination-sm mb-0">
+              <li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
+              <li class="page-item active"><a class="page-link bg-brand border-brand" href="#">1</a></li>
+              <li class="page-item disabled"><a class="page-link" href="#">Próximo</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </section>
+
+      <!-- RIGHT COLUMN: Active Selection Sidebar (approx 5 cols) -->
+      <aside class="col-12 col-lg-5">
+        
+        <!-- Primary Action Card: Add to Ranking Panel -->
+        <div class="custom-card overflow-hidden mb-4 border-brand-subtle">
+          <!-- Card Header -->
+          <div class="bg-brand text-white p-3 d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-list-ol"></i>
+              <h2 class="h6 fw-bold mb-0 text-white">Adicionar ao Ranking</h2>
+            </div>
+            <span class="badge bg-light text-brand fw-semibold">Item Selecionado</span>
+          </div>
+
+          <div class="p-3 p-sm-4">
+            <!-- Target Ranking Selector Dropdown -->
+            <div class="mb-3">
+              <label for="targetRankingSelect" class="form-label small fw-semibold text-secondary">Ranking de Destino</label>
+              <select id="targetRankingSelect" class="form-select form-select-sm py-2">
+                <option selected>All-Time Essential Electronic (Ativo)</option>
+                <option>2024 Heavy Rotation &amp; Standouts</option>
+                <option>Late Night Ambient &amp; Drone</option>
+                <option>Post-Punk &amp; No Wave Deep Dive</option>
+                <option>+ Criar Nova Lista de Ranking...</option>
+              </select>
+            </div>
+
+            <!-- Preview Card of currently selected item -->
+            <div class="bg-light border border-light-subtle rounded-3 p-2.5 d-flex align-items-start gap-2.5 mb-3">
+              <img id="sidebarAlbumThumb" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=120&q=80" alt="Preview album" class="album-art-sm flex-shrink-0">
+              <div class="min-w-0 flex-grow-1">
+                <h3 id="sidebarAlbumTitle" class="small fw-bold text-dark text-truncate mb-0">Selected Ambient Works 85-92</h3>
+                <p id="sidebarAlbumArtist" class="text-muted small mb-1" style="font-size: 11px;">Aphex Twin (1992)</p>
+                <span class="badge bg-brand-soft text-brand border border-brand-subtle" style="font-size: 10px;">
+                  Status: Pronto para salvar na posição #01
+                </span>
+              </div>
+            </div>
+
+            <!-- Rating Input & Position Controls -->
+            <div class="mb-3">
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <label for="ratingRange" class="form-label small fw-semibold text-secondary mb-0">Nota Atribuída / Score</label>
+                <span id="ratingDisplay" class="score-badge-sm">9.5 / 10.0</span>
+              </div>
+              <input type="range" class="form-range" id="ratingRange" min="1.0" max="10.0" step="0.1" value="9.5">
+              <div class="d-flex justify-content-between text-muted" style="font-size: 10px;">
+                <span>1.0 (Regular)</span>
+                <span>5.0 (Médio)</span>
+                <span>10.0 (Obra-Prima)</span>
+              </div>
+            </div>
+
+            <!-- Placement Ordering Selector -->
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label for="rankPosition" class="form-label small fw-semibold text-secondary">Posição na Lista</label>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-text bg-light text-muted fw-bold">#</span>
+                  <input type="number" id="rankPosition" class="form-control fw-bold" min="1" max="100" value="1">
+                </div>
+              </div>
+              <div class="col-6">
+                <label for="tierSelect" class="form-label small fw-semibold text-secondary">Classificação Tier</label>
+                <select id="tierSelect" class="form-select form-select-sm">
+                  <option>S - Lendário</option>
+                  <option>A - Essencial</option>
+                  <option>B - Excelente</option>
+                  <option>C - Notável</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Notes & Review textarea -->
+            <div class="mb-3">
+              <label for="reviewNotes" class="form-label small fw-semibold text-secondary">Anotações / Comentário Crítico (Opcional)</label>
+              <textarea class="form-control form-control-sm" id="reviewNotes" rows="2" placeholder="Descreva os motivos pelo qual o álbum ocupa essa posição..."></textarea>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="d-flex align-items-center gap-2 pt-1">
+              <button class="btn btn-brand btn-sm flex-grow-1 py-2 d-inline-flex align-items-center justify-content-center gap-1.5 shadow-sm" type="button" onclick="confirmAddTrack()">
+                <i class="bi bi-check2-circle"></i>
+                <span>Confirmar &amp; Adicionar</span>
+              </button>
+              <a href="ranking-detail.html" class="btn btn-outline-secondary btn-sm py-2 px-3">
+                Cancelar
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Secondary Card: Target Ranking Queue Preview -->
+        <div class="custom-card p-3 mb-4">
+          <div class="d-flex align-items-center justify-content-between pb-2 border-bottom border-light-subtle mb-2">
+            <h3 class="h6 fw-bold text-dark mb-0">Fila em "All-Time Essential Electronic"</h3>
+            <span class="badge bg-brand-soft text-brand fw-semibold">14 faixas</span>
+          </div>
+
+          <div class="list-group list-group-flush small">
+            <div class="list-group-item px-0 py-2 d-flex align-items-center justify-content-between border-light-subtle">
+              <div class="d-flex align-items-center gap-2 min-w-0">
+                <span class="fw-bold text-muted" style="width: 25px;">#01</span>
+                <div class="min-w-0">
+                  <p class="fw-semibold text-dark text-truncate mb-0">Selected Ambient Works 85-92</p>
+                  <span class="text-muted" style="font-size: 11px;">Aphex Twin</span>
+                </div>
+              </div>
+              <span class="score-badge-sm flex-shrink-0">9.8</span>
+            </div>
+
+            <div class="list-group-item px-0 py-2 d-flex align-items-center justify-content-between border-light-subtle">
+              <div class="d-flex align-items-center gap-2 min-w-0">
+                <span class="fw-bold text-muted" style="width: 25px;">#02</span>
+                <div class="min-w-0">
+                  <p class="fw-semibold text-dark text-truncate mb-0">Music Has the Right to Children</p>
+                  <span class="text-muted" style="font-size: 11px;">Boards of Canada</span>
+                </div>
+              </div>
+              <span class="score-badge-sm flex-shrink-0">9.5</span>
+            </div>
+
+            <div class="list-group-item px-0 py-2 d-flex align-items-center justify-content-between border-light-subtle">
+              <div class="d-flex align-items-center gap-2 min-w-0">
+                <span class="fw-bold text-muted" style="width: 25px;">#03</span>
+                <div class="min-w-0">
+                  <p class="fw-semibold text-dark text-truncate mb-0">Untrue</p>
+                  <span class="text-muted" style="font-size: 11px;">Burial</span>
+                </div>
+              </div>
+              <span class="score-badge-sm flex-shrink-0">9.4</span>
+            </div>
+          </div>
+
+          <div class="pt-2 mt-2 border-top border-light-subtle d-flex align-items-center justify-content-between small">
+            <a href="ranking-detail.html" class="text-brand fw-semibold text-decoration-none">
+              Ver todas as 14 faixas &rarr;
+            </a>
+            <span class="text-muted" style="font-size: 11px;"><i class="bi bi-arrow-repeat me-1"></i>Sincronizado</span>
+          </div>
+        </div>
+
+        <!-- Help & Tips Card -->
+        <div class="alert alert-light border border-brand-subtle rounded-3 p-3 small d-flex align-items-start gap-2.5 mb-0">
+          <i class="bi bi-info-circle-fill text-brand fs-5 flex-shrink-0"></i>
+          <div>
+            <div class="fw-bold text-dark mb-0.5">Você sabia?</div>
+            <div class="text-secondary" style="font-size: 11px;">
+              Ao adicionar um álbum repetido, o sistema avisará se ele já consta em outras listas ativas da sua conta para evitar duplicatas indesejadas.
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+  <!-- END: Main Content Area -->
+
+  <!-- Toast Notification (Bootstrap 5.3) -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3 z-3">
+    <div id="addTrackToast" class="toast align-items-center text-bg-dark border-0 shadow-lg rounded-3" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body d-flex align-items-center gap-2">
+          <i class="bi bi-check-circle-fill text-success fs-5"></i>
+          <div>
+            Faixa <strong id="toastTrackName">"Selected Ambient Works 85-92"</strong> adicionada ao ranking!
+          </div>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEGIN: Main Footer -->
+  <footer class="site-footer py-3 px-4 px-md-5 mt-auto">
+    <div class="container-xl d-flex flex-column flex-sm-row align-items-center justify-content-between gap-2">
+      <div class="d-flex align-items-center gap-2 small">
+        <span class="fw-bold text-dark">Rank Your Music</span>
+        <span>•</span>
+        <span>&copy; 2024 Rank Your Music. Indexação de metadados musicais abertos.</span>
+      </div>
+      <div class="d-flex align-items-center gap-3 small">
+        <a href="dashboard.html" class="text-secondary text-decoration-none">Dashboard</a>
+        <a href="ranking-detail.html" class="text-secondary text-decoration-none">Ver Ranking</a>
+        <a href="#" class="text-secondary text-decoration-none">Metodologia</a>
+        <a href="index.html" class="text-danger text-decoration-none fw-semibold">Sair</a>
+      </div>
+    </div>
+  </footer>
+  <!-- END: Main Footer -->
+
+  <!-- Bootstrap 5.3 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Live update rating range slider
+    const ratingRange = document.getElementById('ratingRange');
+    const ratingDisplay = document.getElementById('ratingDisplay');
+    if (ratingRange && ratingDisplay) {
+      ratingRange.addEventListener('input', function() {
+        ratingDisplay.textContent = parseFloat(this.value).toFixed(1) + ' / 10.0';
+      });
+    }
+
+    // Select Track function
+    function selectTrack(title, artist, thumb, score) {
+      document.getElementById('sidebarAlbumTitle').textContent = title;
+      document.getElementById('sidebarAlbumArtist').textContent = artist;
+      document.getElementById('sidebarAlbumThumb').src = thumb;
+      document.getElementById('ratingRange').value = score;
+      document.getElementById('ratingDisplay').textContent = parseFloat(score).toFixed(1) + ' / 10.0';
+      window.scrollTo({ top: 120, behavior: 'smooth' });
+    }
+
+    // Confirm and Add Track Toast
+    function confirmAddTrack() {
+      const title = document.getElementById('sidebarAlbumTitle').textContent;
+      document.getElementById('toastTrackName').textContent = `"${title}"`;
+      const toastEl = document.getElementById('addTrackToast');
+      const toast = new bootstrap.Toast(toastEl, { delay: 4000 });
+      toast.show();
+    }
+  </script>
+</body>
+</html>

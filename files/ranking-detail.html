@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rank Your Music - Ranking Detail</title>
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="page.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- BEGIN: Main Header -->
+  <header class="w-100 bg-white border-bottom border-light-subtle sticky-top z-3">
+    <div class="container-xl d-flex align-items-center justify-content-between py-2.5">
+      
+      <!-- Brand & Navigation Links -->
+      <div class="d-flex align-items-center gap-4">
+        <a href="dashboard.html" class="d-flex align-items-center gap-2 text-decoration-none">
+          <div class="navbar-brand-logo">
+            <i class="bi bi-disc-fill"></i>
+          </div>
+          <span class="fw-bold fs-6 text-dark tracking-tight">Rank Your Music</span>
+        </a>
+
+        <!-- Top Navigation -->
+        <nav class="d-none d-md-flex align-items-center gap-1">
+          <a class="nav-link px-3 py-2 text-secondary" href="dashboard.html">
+            <i class="bi bi-collection-play me-1"></i> My Rankings
+          </a>
+          <a class="nav-link px-3 py-2 text-secondary" href="search.html">
+            <i class="bi bi-search me-1"></i> Search &amp; Add
+          </a>
+        </nav>
+      </div>
+
+      <!-- Right Header Controls -->
+      <div class="d-flex align-items-center gap-3">
+        <!-- Quick Search -->
+        <div class="d-none d-sm-block position-relative" style="width: 220px;">
+          <input type="search" class="form-control form-control-sm rounded-pill ps-4 bg-light border-light-subtle" placeholder="Search albums, artists...">
+          <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-2.5 text-muted small"></i>
+        </div>
+
+        <!-- Add Track Action -->
+        <a href="search.html" class="btn btn-brand btn-sm d-none d-sm-inline-flex align-items-center gap-1.5 px-3 py-1.5 shadow-sm">
+          <i class="bi bi-plus-lg"></i>
+          <span>Add Track</span>
+        </a>
+
+        <!-- User Profile Dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-link p-0 text-decoration-none dropdown-toggle d-flex align-items-center gap-2 border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Julian V." class="rounded-circle border border-2 border-secondary-subtle" width="34" height="34">
+            <span class="d-none d-lg-inline text-dark small fw-semibold">Julian V.</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm border-light-subtle small">
+            <li class="px-3 py-1 text-muted" style="font-size: 11px;">CONECTADO COMO</li>
+            <li class="px-3 py-1 fw-bold text-dark">Julian Rey del Musica</li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="dashboard.html"><i class="bi bi-folder2-open me-2 text-muted"></i>Meus Rankings</a></li>
+            <li><a class="dropdown-item" href="search.html"><i class="bi bi-music-note-beamed me-2 text-muted"></i>Pesquisar Músicas</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Encerrar Sessão</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <!-- END: Main Header -->
+
+  <!-- BEGIN: Main Content Area -->
+  <main class="flex-grow-1 container-xl py-4">
+
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="breadcrumb" class="mb-3">
+      <ol class="breadcrumb small mb-0">
+        <li class="breadcrumb-item">
+          <a href="dashboard.html" class="text-brand fw-semibold text-decoration-none d-inline-flex align-items-center gap-1">
+            <i class="bi bi-arrow-left"></i> Voltar aos Rankings
+          </a>
+        </li>
+        <li class="breadcrumb-item active text-dark fw-bold" aria-current="page">All-Time Essential Electronic</li>
+      </ol>
+    </nav>
+
+    <!-- BEGIN: Hero Ranking Summary Card -->
+    <section class="custom-card p-4 p-md-5 mb-4 border-light-subtle shadow-xs">
+      <div class="row g-4 align-items-start justify-content-between">
+        
+        <!-- Left: Details & Metadata -->
+        <div class="col-12 col-lg-8">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill py-1 px-2.5 d-inline-flex align-items-center gap-1.5 small">
+              <span class="p-1 bg-success rounded-circle"></span>
+              Ranking Público
+            </span>
+            <span class="text-muted small">•</span>
+            <span class="text-muted small">Atualizado há 2 dias</span>
+          </div>
+
+          <h1 class="h2 fw-bold text-dark mb-2">All-Time Essential Electronic</h1>
+
+          <!-- Badges & Stats Bar -->
+          <div class="d-flex flex-wrap align-items-center gap-3 small text-muted mb-3">
+            <div>
+              <span class="text-muted">Curador:</span>
+              <strong class="text-dark">Julian R.</strong>
+            </div>
+            <span>|</span>
+            <div class="d-flex align-items-center gap-1">
+              <i class="bi bi-music-note-list text-muted"></i>
+              <span class="text-dark fw-medium">12 Faixas (45 min)</span>
+            </div>
+            <span>|</span>
+            <div class="d-flex align-items-center gap-1">
+              <span class="text-muted">Nota Média:</span>
+              <span class="score-badge-sm">9.2</span>
+            </div>
+          </div>
+
+          <p class="text-secondary mb-0 leading-relaxed">
+            Obras-primas definitivas da música eletrônica que vão do ambient techno ao IDM experimental. Lançamentos rigorosamente essenciais com análises aprofundadas, prensagens de referência e críticas detalhadas de design sonoro.
+          </p>
+        </div>
+
+        <!-- Right: Actions Buttons Group -->
+        <div class="col-12 col-lg-4 d-flex flex-column align-items-lg-end gap-2">
+          <a href="search.html" class="btn btn-brand btn-sm px-4 py-2 w-100 w-lg-auto d-inline-flex align-items-center justify-content-center gap-2 shadow-sm">
+            <i class="bi bi-plus-lg"></i>
+            <span>Adicionar Faixa</span>
+          </a>
+          <div class="d-flex align-items-center gap-2 w-100 w-lg-auto">
+            <button class="btn btn-outline-secondary btn-sm py-2 px-3 flex-grow-1 bg-white text-dark d-inline-flex align-items-center justify-content-center gap-1.5" onclick="alert('Link do ranking copiado!')">
+              <i class="bi bi-share text-muted"></i>
+              <span>Compartilhar</span>
+            </button>
+            <div class="dropdown">
+              <button class="btn btn-outline-secondary btn-sm py-2 px-2.5 bg-white text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Mais Opções">
+                <i class="bi bi-three-dots"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end small shadow-sm border-light-subtle">
+                <li><a class="dropdown-item" href="search.html"><i class="bi bi-search me-2"></i>Buscar novas faixas</a></li>
+                <li><a class="dropdown-item" href="#" onclick="alert('Ranking clonado para rascunhos!')"><i class="bi bi-copy me-2"></i>Duplicar como Rascunho</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-danger" href="dashboard.html" onclick="return confirm('Deseja realmente remover este ranking?')"><i class="bi bi-trash me-2"></i>Excluir Ranking</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- END: Hero Ranking Summary Card -->
+
+    <!-- BEGIN: Two Column Layout (Tracklist + Analytics) -->
+    <div class="row g-4 align-items-start">
+
+      <!-- LEFT COLUMN: Curated Tracklist (approx 8 cols) -->
+      <section class="col-12 col-lg-8">
+        
+        <!-- Tracklist Header Controls -->
+        <div class="d-flex align-items-center justify-content-between pb-2 mb-3 border-bottom border-light-subtle">
+          <div class="d-flex align-items-center gap-2">
+            <h2 class="h6 fw-bold text-uppercase text-muted mb-0" style="font-size: 11px; letter-spacing: 0.5px;">Curated Tracklist</h2>
+            <span class="badge bg-light text-secondary rounded-pill fw-semibold border border-light-subtle">12 entradas</span>
+          </div>
+
+          <div class="d-flex align-items-center gap-2 small text-muted">
+            <button class="btn btn-sm btn-link p-0 text-decoration-none text-secondary d-inline-flex align-items-center gap-1">
+              <i class="bi bi-sort-numeric-down"></i>
+              <span>Ordenar por Posição</span>
+            </button>
+            <span>|</span>
+            <button class="btn btn-sm btn-link p-0 text-decoration-none text-brand fw-semibold">
+              Reordenar
+            </button>
+          </div>
+        </div>
+
+        <!-- Track Item 01 -->
+        <article class="track-item d-flex align-items-center justify-content-between gap-3 mb-3">
+          <div class="d-flex align-items-center gap-3 min-w-0">
+            <span class="track-rank-number">01</span>
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=140&q=80" alt="Selected Ambient Works 85-92" class="album-art-md flex-shrink-0">
+            <div class="min-w-0">
+              <div class="d-flex align-items-center gap-2 mb-0.5">
+                <h3 class="h6 fw-bold text-dark text-truncate mb-0">Selected Ambient Works 85-92</h3>
+                <span class="badge bg-info-subtle text-info-emphasis border border-info-subtle py-0 px-1.5" style="font-size: 10px;">IDM</span>
+              </div>
+              <p class="text-muted small text-truncate mb-0">Aphex Twin • 1992 • Apollo Records</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-2 flex-shrink-0">
+            <div class="text-end">
+              <div class="score-badge">9.8</div>
+              <div class="text-muted small d-none d-sm-block" style="font-size: 10px;">Score</div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-sm btn-light border-0 text-muted p-1 rounded-circle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-three-dots-vertical"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end small shadow-sm border-light-subtle">
+                <li><a class="dropdown-item" href="search.html"><i class="bi bi-pencil me-2"></i>Editar Posição / Nota</a></li>
+                <li><a class="dropdown-item text-danger" href="#" onclick="alert('Faixa removida do ranking.')"><i class="bi bi-trash me-2"></i>Remover</a></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track Item 02 -->
+        <article class="track-item d-flex align-items-center justify-content-between gap-3 mb-3">
+          <div class="d-flex align-items-center gap-3 min-w-0">
+            <span class="track-rank-number">02</span>
+            <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=140&q=80" alt="Music Has the Right to Children" class="album-art-md flex-shrink-0">
+            <div class="min-w-0">
+              <div class="d-flex align-items-center gap-2 mb-0.5">
+                <h3 class="h6 fw-bold text-dark text-truncate mb-0">Music Has the Right to Children</h3>
+                <span class="badge bg-success-subtle text-success border border-success-subtle py-0 px-1.5" style="font-size: 10px;">Downtempo</span>
+              </div>
+              <p class="text-muted small text-truncate mb-0">Boards of Canada • 1998 • Warp Records</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-2 flex-shrink-0">
+            <div class="text-end">
+              <div class="score-badge">9.5</div>
+              <div class="text-muted small d-none d-sm-block" style="font-size: 10px;">Score</div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-sm btn-light border-0 text-muted p-1 rounded-circle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-three-dots-vertical"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end small shadow-sm border-light-subtle">
+                <li><a class="dropdown-item" href="search.html"><i class="bi bi-pencil me-2"></i>Editar Posição / Nota</a></li>
+                <li><a class="dropdown-item text-danger" href="#" onclick="alert('Faixa removida.')"><i class="bi bi-trash me-2"></i>Remover</a></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track Item 03 -->
+        <article class="track-item d-flex align-items-center justify-content-between gap-3 mb-3">
+          <div class="d-flex align-items-center gap-3 min-w-0">
+            <span class="track-rank-number">03</span>
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=140&q=80" alt="Untrue" class="album-art-md flex-shrink-0">
+            <div class="min-w-0">
+              <div class="d-flex align-items-center gap-2 mb-0.5">
+                <h3 class="h6 fw-bold text-dark text-truncate mb-0">Untrue</h3>
+                <span class="badge bg-primary-subtle text-primary border border-primary-subtle py-0 px-1.5" style="font-size: 10px;">Dubstep</span>
+              </div>
+              <p class="text-muted small text-truncate mb-0">Burial • 2007 • Hyperdub</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-2 flex-shrink-0">
+            <div class="text-end">
+              <div class="score-badge">9.4</div>
+              <div class="text-muted small d-none d-sm-block" style="font-size: 10px;">Score</div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-sm btn-light border-0 text-muted p-1 rounded-circle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-three-dots-vertical"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end small shadow-sm border-light-subtle">
+                <li><a class="dropdown-item" href="search.html"><i class="bi bi-pencil me-2"></i>Editar Posição / Nota</a></li>
+                <li><a class="dropdown-item text-danger" href="#" onclick="alert('Faixa removida.')"><i class="bi bi-trash me-2"></i>Remover</a></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track Item 04 (Featured Highlight) -->
+        <article class="track-item featured d-flex align-items-center justify-content-between gap-3 mb-3">
+          <div class="d-flex align-items-center gap-3 min-w-0">
+            <span class="track-rank-number text-brand">04</span>
+            <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=140&q=80" alt="Dummy" class="album-art-md flex-shrink-0">
+            <div class="min-w-0">
+              <div class="d-flex align-items-center gap-2 mb-0.5">
+                <h3 class="h6 fw-bold text-dark text-truncate mb-0">Dummy</h3>
+                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle py-0 px-1.5" style="font-size: 10px;">Trip Hop</span>
+              </div>
+              <p class="text-muted small text-truncate mb-0">Portishead • 1994 • Go! Beat</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-2 flex-shrink-0">
+            <div class="text-end">
+              <div class="score-badge bg-white">9.1</div>
+              <div class="text-muted small d-none d-sm-block" style="font-size: 10px;">Score</div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-sm btn-light border-0 text-muted p-1 rounded-circle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-three-dots-vertical"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end small shadow-sm border-light-subtle">
+                <li><a class="dropdown-item" href="search.html"><i class="bi bi-pencil me-2"></i>Editar Posição / Nota</a></li>
+                <li><a class="dropdown-item text-danger" href="#" onclick="alert('Faixa removida.')"><i class="bi bi-trash me-2"></i>Remover</a></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track Item 05 -->
+        <article class="track-item d-flex align-items-center justify-content-between gap-3 mb-3">
+          <div class="d-flex align-items-center gap-3 min-w-0">
+            <span class="track-rank-number">05</span>
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=140&q=80" alt="Geogaddi" class="album-art-md flex-shrink-0">
+            <div class="min-w-0">
+              <div class="d-flex align-items-center gap-2 mb-0.5">
+                <h3 class="h6 fw-bold text-dark text-truncate mb-0">Geogaddi</h3>
+                <span class="badge bg-info-subtle text-info-emphasis border border-info-subtle py-0 px-1.5" style="font-size: 10px;">IDM</span>
+              </div>
+              <p class="text-muted small text-truncate mb-0">Boards of Canada • 2002 • Warp Records</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-2 flex-shrink-0">
+            <div class="text-end">
+              <div class="score-badge">8.9</div>
+              <div class="text-muted small d-none d-sm-block" style="font-size: 10px;">Score</div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-sm btn-light border-0 text-muted p-1 rounded-circle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-three-dots-vertical"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end small shadow-sm border-light-subtle">
+                <li><a class="dropdown-item" href="search.html"><i class="bi bi-pencil me-2"></i>Editar Posição / Nota</a></li>
+                <li><a class="dropdown-item text-danger" href="#" onclick="alert('Faixa removida.')"><i class="bi bi-trash me-2"></i>Remover</a></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Show Remaining Button -->
+        <div class="text-center pt-2">
+          <button class="btn btn-outline-secondary btn-sm px-4 py-2 rounded-3 bg-white text-brand border-brand-subtle fw-semibold shadow-xs" onclick="alert('Todas as 12 faixas já estão listadas na demonstração atual!')">
+            Mostrar as 7 faixas restantes
+          </button>
+        </div>
+
+      </section>
+
+      <!-- RIGHT COLUMN: Analytics & Quick Stats (approx 4 cols) -->
+      <aside class="col-12 col-lg-4 space-y-4">
+        
+        <!-- Widget: Ranking Analytics Card -->
+        <div class="custom-card p-4 mb-4">
+          <div class="d-flex align-items-center justify-content-between pb-3 border-bottom border-light-subtle mb-3">
+            <h3 class="h6 fw-bold text-dark mb-0">Estatísticas do Ranking</h3>
+            <span class="badge bg-brand-soft text-brand border border-brand-subtle py-1 px-2">Live Breakdown</span>
+          </div>
+
+          <!-- Quick Metrics Row -->
+          <div class="row g-2 mb-3">
+            <div class="col-6">
+              <div class="bg-light border border-light-subtle rounded-3 p-2.5">
+                <span class="text-muted small" style="font-size: 11px;">Duração Total</span>
+                <div class="fw-bold text-dark fs-6 mt-0.5">58m 22s</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="bg-light border border-light-subtle rounded-3 p-2.5">
+                <span class="text-muted small" style="font-size: 11px;">Nota Mediana</span>
+                <div class="fw-bold text-brand fs-6 mt-0.5">9.3 / 10</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Score Distribution Simulated Bar Chart -->
+          <div class="mb-4">
+            <div class="d-flex justify-content-between align-items-center small mb-2">
+              <span class="fw-semibold text-secondary">Distribuição de Notas</span>
+              <span class="text-muted" style="font-size: 11px;">Pico: 9.0–9.9</span>
+            </div>
+
+            <div class="chart-bar-container">
+              <div class="chart-bar bg-info-subtle border border-info" style="height: 25%;" title="7.0-7.9: 1 faixa"></div>
+              <div class="chart-bar bg-brand-subtle border border-brand-subtle" style="height: 45%;" title="8.0-8.4: 3 faixas"></div>
+              <div class="chart-bar bg-teal text-white" style="height: 80%; background-color: var(--brand-teal-600);" title="8.5-9.2: 5 faixas"></div>
+              <div class="chart-bar text-white" style="height: 100%; background-color: var(--brand-teal-800);" title="9.3-10: 3 faixas"></div>
+            </div>
+            <div class="d-flex justify-content-between text-muted mt-1" style="font-size: 10px;">
+              <span>7.0-7.9</span>
+              <span>8.0-8.4</span>
+              <span>8.5-9.2</span>
+              <span>9.3-10</span>
+            </div>
+          </div>
+
+          <!-- Genre Breakdown Progress -->
+          <div>
+            <span class="small fw-semibold text-secondary d-block mb-2">Composição por Gêneros</span>
+            <div class="mb-2">
+              <div class="d-flex justify-content-between small text-muted mb-1" style="font-size: 11px;">
+                <span>IDM / Ambient</span>
+                <span class="fw-bold text-dark">55%</span>
+              </div>
+              <div class="progress" style="height: 6px;">
+                <div class="progress-bar" role="progressbar" style="width: 55%; background-color: var(--brand-teal-800);" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <div class="d-flex justify-content-between small text-muted mb-1" style="font-size: 11px;">
+                <span>Downtempo &amp; Trip Hop</span>
+                <span class="fw-bold text-dark">30%</span>
+              </div>
+              <div class="progress" style="height: 6px;">
+                <div class="progress-bar" role="progressbar" style="width: 30%; background-color: var(--brand-teal-600);" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="d-flex justify-content-between small text-muted mb-1" style="font-size: 11px;">
+                <span>Dubstep / UK Bass</span>
+                <span class="fw-bold text-dark">15%</span>
+              </div>
+              <div class="progress" style="height: 6px;">
+                <div class="progress-bar bg-secondary" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Widget: Export & Integrations Card -->
+        <div class="custom-card p-4">
+          <h3 class="h6 fw-bold text-dark mb-3">Exportação &amp; Integrações</h3>
+          <div class="d-grid gap-2 small">
+            <button class="btn btn-outline-secondary btn-sm py-2 px-3 text-start d-flex align-items-center justify-content-between bg-white text-dark" onclick="alert('Exportação para o Spotify iniciada com sucesso!')">
+              <span class="d-flex align-items-center gap-2">
+                <i class="bi bi-spotify text-success fs-6"></i>
+                <span>Exportar Playlist para Spotify</span>
+              </span>
+              <i class="bi bi-arrow-right text-muted"></i>
+            </button>
+            <button class="btn btn-outline-secondary btn-sm py-2 px-3 text-start d-flex align-items-center justify-content-between bg-white text-dark" onclick="alert('Download do arquivo All-Time-Essential-Electronic.csv concluído!')">
+              <span class="d-flex align-items-center gap-2">
+                <i class="bi bi-file-earmark-spreadsheet text-secondary fs-6"></i>
+                <span>Baixar Dados Brutos (.CSV)</span>
+              </span>
+              <i class="bi bi-download text-muted"></i>
+            </button>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+    <!-- END: Two Column Layout -->
+
+  </main>
+  <!-- END: Main Content Area -->
+
+  <!-- Toast Notification Floating in bottom right -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3 z-3">
+    <div id="statusToast" class="toast align-items-center text-bg-dark border-0 shadow-lg rounded-3" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body d-flex align-items-center gap-2">
+          <i class="bi bi-info-circle-fill text-info fs-5"></i>
+          <div>Ação realizada com sucesso no ranking.</div>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEGIN: Main Footer -->
+  <footer class="site-footer py-3 px-4 px-md-5 mt-auto">
+    <div class="container-xl d-flex flex-column flex-sm-row align-items-center justify-content-between gap-2">
+      <div class="d-flex align-items-center gap-2 small">
+        <span class="fw-bold text-dark">Rank Your Music</span>
+        <span>•</span>
+        <span>&copy; 2024 Rank Your Music. Curação e crítica musical desde o lançamento.</span>
+      </div>
+      <div class="d-flex align-items-center gap-3 small">
+        <a href="dashboard.html" class="text-secondary text-decoration-none">Dashboard</a>
+        <a href="search.html" class="text-secondary text-decoration-none">Search &amp; Add</a>
+        <a href="#" class="text-secondary text-decoration-none">Metodologia</a>
+        <a href="index.html" class="text-danger text-decoration-none fw-semibold">Sair</a>
+      </div>
+    </div>
+  </footer>
+  <!-- END: Main Footer -->
+
+  <!-- Bootstrap 5.3 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,19 +1,21 @@
 # 🎶Rank-your-music🎶
-Website de listagem de músicas por ordem de preferência própria do usuário.
 
+Website de listagem de músicas por ordem de preferência própria do usuário.
 
 ## Autor: Mateus Neckel de Faveri
 
 O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
 ## 📚 Documentação do Projeto
+
 Para entender as regras de negócio, o escopo e a arquitetura técnica da aplicação, consulte os documentos abaixo:
 
 ## 📄 Product Requirements Document (PRD) - Visão geral, atores e histórias de usuário.
+
 - [🛠️ Especificação Técnica (PRD)](https://github.com/matmat277/rank-your-music/blob/main/docs/prd.md)
 - [Arquitetura do sistema (architecture)](https://github.com/matmat277/rank-your-music/blob/main/docs/architecture.md)
 
-# 🎨 Design 
+## 🎨 Design
 
 🎨 Design System - Identidade visual
 
@@ -21,14 +23,13 @@ Para entender as regras de negócio, o escopo e a arquitetura técnica da aplica
 
 🌐 Site em Produção - GitHub Pages
 
-
 ## 💻 Tecnologias e Dependências
- - Framework CSS: Bootstrap (Grid responsivo, utilitários de layout e componentes JS nativos, além de ser o framework mais usado do mundo).
- - Preprocessador CSS: SaSS/SCSS (Escolhido para modularizar o CSS e sobreescrever as variáveis nativas do bootstrap, permitindo aplcar fielmente o design desenhado no Figma).
- - JavaScript: ES6+ Vanilla JS + jQuery (Utilizads em conjunto para a manipulação dinâmica do DOM, controle de fluxo do formulário multi-etapas, gerenciamento de modais e requisições assincronas).
- - API Fake Local: JSON server (Empregado como API Fake local para simular a persistência de dados dos cadastros de usuários e suas preferências táticas na coleção `user`).
- - API externa pública: MusicBrainz + Cover art Archive (API para coleta de dados ou informações sobre as músicas requisitadas, cover art é parte da API de MusicBrainz que somente localiza imagem do álbum/música).
 
+- Framework CSS: Bootstrap (Grid responsivo, utilitários de layout e componentes JS nativos, além de ser o framework mais usado do mundo).
+- Preprocessador CSS: SaSS/SCSS (Escolhido para modularizar o CSS e sobreescrever as variáveis nativas do bootstrap, permitindo aplcar fielmente o design desenhado no Figma).
+- JavaScript: ES6+ Vanilla JS + jQuery (Utilizads em conjunto para a manipulação dinâmica do DOM, controle de fluxo do formulário multi-etapas, gerenciamento de modais e requisições assincronas).
+- API Fake Local: JSON server (Empregado como API Fake local para simular a persistência de dados dos cadastros de usuários e suas preferências táticas na coleção `user`).
+- API externa pública: MusicBrainz + Cover art Archive (API para coleta de dados ou informações sobre as músicas requisitadas, cover art é parte da API de MusicBrainz que somente localiza imagem do álbum/música).
 
 ## ✅ Checklist | Indicadores de Desempenho (ID) dos Resultados de Aprendizagem (RA)
 

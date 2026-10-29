@@ -1,11 +1,254 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rank your music</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rank Your Music - Autenticação</title>
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="page.css">
 </head>
-<body>
-    
+
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+  <!-- BEGIN: MainHeader -->
+  <header class="w-100 bg-white border-bottom border-light-subtle py-3 px-4 px-md-5">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <!-- Brand Logo and Tagline -->
+      <div class="d-flex align-items-center gap-4">
+        <a href="dashboard.html" class="d-flex align-items-center gap-2 text-decoration-none">
+          <div class="navbar-brand-logo">
+            <i class="bi bi-disc-fill"></i>
+          </div>
+          <div class="d-flex flex-column">
+            <span class="fw-bold fs-6 text-dark lh-1">Rank Your Music</span>
+            <span class="text-uppercase fw-semibold text-brand"
+              style="font-size: 10px; letter-spacing: 0.5px;">Community Edition</span>
+          </div>
+        </a>
+
+        <!-- Tagline separator (Desktop) -->
+        <div class="d-none d-md-block ps-4 border-start border-secondary-subtle text-muted small">
+          Organize, avalie e critique seus arquivos musicais com precisão.
+        </div>
+      </div>
+
+      <!-- Right Header Preview Badge -->
+      <div>
+        <a href="dashboard.html"
+          class="badge rounded-pill bg-brand-soft text-brand text-decoration-none border border-brand-subtle py-2 px-3 d-inline-flex align-items-center gap-2 shadow-sm">
+          <i class="bi bi-person-check-fill text-success"></i>
+          <span class="fw-medium">Modo Demonstração</span>
+          <span class="text-secondary small">• Ir ao Dashboard &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- END: MainHeader -->
+
+  <!-- BEGIN: Authentication Section -->
+  <main class="flex-grow-1 d-flex align-items-center justify-content-center px-3 py-5">
+    <div class="w-100 auth-card bg-white p-4 p-sm-5">
+
+      <!-- Card Title & Subtitle -->
+      <div class="text-center mb-4">
+        <h1 class="h4 fw-bold text-dark mb-1">Acesse sua coleção</h1>
+        <p class="text-muted small mb-0">Entre com suas credenciais para gerenciar seus rankings.</p>
+      </div>
+
+      <!-- Segmented Tabs (Bootstrap Nav-Pills) -->
+      <ul class="nav nav-pills nav-fill p-1 bg-light rounded-3 mb-4 auth-nav-pills" id="authTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="login-tab" data-bs-toggle="pill" data-bs-target="#login-panel"
+            type="button" role="tab" aria-controls="login-panel" aria-selected="true">
+            <i class="bi bi-box-arrow-in-right me-1"></i> Entrar
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="register-tab" data-bs-toggle="pill" data-bs-target="#register-panel"
+            type="button" role="tab" aria-controls="register-panel" aria-selected="false">
+            <i class="bi bi-person-plus me-1"></i> Criar Conta
+          </button>
+        </li>
+      </ul>
+
+      <!-- Dismissible Alert Notice -->
+      <div
+        class="alert alert-danger alert-dismissible fade show d-flex align-items-center gap-2 py-2 px-3 small rounded-3 mb-3"
+        role="alert">
+        <i class="bi bi-exclamation-circle-fill text-danger fs-6 flex-shrink-0"></i>
+        <div>
+          <strong>Aviso de demonstração:</strong> Você pode clicar diretamente em "Entrar" para navegar pelo sistema.
+        </div>
+        <button type="button" class="btn-close py-2" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+      <div class="tab-content" id="authTabContent">
+        <!-- TAB 1: LOGIN -->
+        <div class="tab-pane fade show active" id="login-panel" role="tabpanel" aria-labelledby="login-tab">
+          <form action="dashboard.html" method="GET">
+            <!-- Email / Usuário -->
+            <div class="mb-3">
+              <label for="login-username" class="form-label small fw-semibold text-secondary">E-mail ou Usuário</label>
+              <div class="input-group">
+                <input type="text" class="form-control form-control-sm py-2" id="login-username"
+                  value="julian.reydelmusica@server.com" required placeholder="seu.email@exemplo.com">
+                <span class="input-group-text bg-white text-muted"><i class="bi bi-envelope"></i></span>
+              </div>
+            </div>
+
+            <!-- Senha -->
+            <div class="mb-3">
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <label for="login-password" class="form-label small fw-semibold text-secondary mb-0">Senha</label>
+                <a href="#" class="small text-decoration-none text-brand fw-medium"
+                  onclick="alert('Link de recuperação de senha enviado para o e-mail cadastrado!')">Esqueceu a
+                  senha?</a>
+              </div>
+              <div class="input-group">
+                <input type="password" class="form-control form-control-sm py-2 font-monospace" id="login-password"
+                  value="secretPass1234#" required placeholder="••••••••">
+                <button class="btn btn-outline-secondary" type="button" id="togglePasswordBtn"
+                  title="Mostrar/ocultar senha">
+                  <i class="bi bi-eye" id="togglePasswordIcon"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Lembrar de mim -->
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+              <label class="form-check-label small text-muted" for="rememberMe">
+                Manter conectado por 30 dias
+              </label>
+            </div>
+
+            <!-- Botão Principal de Login -->
+            <button type="submit"
+              class="btn btn-brand w-100 py-2 d-flex align-items-center justify-content-center gap-2 shadow-sm">
+              <span>Entrar no Rank Your Music</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- TAB 2: REGISTER -->
+        <div class="tab-pane fade" id="register-panel" role="tabpanel" aria-labelledby="register-tab">
+          <form action="dashboard.html" method="GET">
+            <!-- Nome -->
+            <div class="mb-2">
+              <label for="reg-name" class="form-label small fw-semibold text-secondary">Nome Completo</label>
+              <input type="text" class="form-control form-control-sm py-2" id="reg-name" placeholder="Ex: Julian V."
+                required>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-2">
+              <label for="reg-email" class="form-label small fw-semibold text-secondary">E-mail</label>
+              <input type="email" class="form-control form-control-sm py-2" id="reg-email"
+                placeholder="seu.email@exemplo.com" required>
+            </div>
+
+            <!-- Senha -->
+            <div class="mb-2">
+              <label for="reg-password" class="form-label small fw-semibold text-secondary">Senha</label>
+              <input type="password" class="form-control form-control-sm py-2" id="reg-password"
+                placeholder="Mínimo 8 caracteres" required>
+            </div>
+
+            <!-- Termos -->
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="acceptTerms" required checked>
+              <label class="form-check-label small text-muted" for="acceptTerms">
+                Concordo com os Termos e Políticas da plataforma.
+              </label>
+            </div>
+
+            <button type="submit"
+              class="btn btn-brand w-100 py-2 d-flex align-items-center justify-content-center gap-2 shadow-sm">
+              <span>Criar Minha Conta</span>
+              <i class="bi bi-check2-circle"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- SSO / Social Logins -->
+      <div class="mt-4 pt-3 border-top border-light-subtle">
+        <p class="text-center text-muted small mb-2" style="font-size: 11px;">OU CONTINUE COM</p>
+        <div class="row g-2">
+          <div class="col-6">
+            <a href="dashboard.html"
+              class="btn btn-outline-secondary w-100 btn-sm py-2 d-flex align-items-center justify-content-center gap-2 text-dark">
+              <i class="bi bi-apple"></i>
+              <span>Apple Music</span>
+            </a>
+          </div>
+          <div class="col-6">
+            <a href="dashboard.html"
+              class="btn btn-outline-secondary w-100 btn-sm py-2 d-flex align-items-center justify-content-center gap-2 text-dark">
+              <i class="bi bi-google text-danger"></i>
+              <span>Google</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Support Footer Note -->
+      <p class="text-center text-muted small mt-4 mb-0" style="font-size: 11px;">
+        Precisa de suporte com a sua conta?
+        <a href="#" class="text-brand text-decoration-none fw-semibold">Contate o administrador</a>
+      </p>
+
+    </div>
+  </main>
+  <!-- END: Authentication Section -->
+
+  <!-- BEGIN: MainFooter -->
+  <footer class="site-footer py-3 px-4 px-md-5">
+    <div class="container-fluid d-flex flex-column flex-sm-row align-items-center justify-content-between gap-2">
+      <div class="d-flex align-items-center gap-2">
+        <span class="fw-bold text-dark">Rank Your Music</span>
+        <span>•</span>
+        <span>&copy; 2024 Rank Your Music. Curação personalizada e crítica musical.</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="dashboard.html" class="text-secondary text-decoration-none">Dashboard</a>
+        <a href="#" class="text-secondary text-decoration-none">Sobre</a>
+        <a href="#" class="text-secondary text-decoration-none">Metodologia</a>
+        <a href="#" class="text-secondary text-decoration-none">Privacidade</a>
+        <a href="#" class="text-secondary text-decoration-none">API Docs</a>
+      </div>
+    </div>
+  </footer>
+  <!-- END: MainFooter -->
+
+  <!-- Bootstrap 5.3 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Toggle Password Visibility
+    const togglePasswordBtn = document.getElementById('togglePasswordBtn');
+    const passwordInput = document.getElementById('login-password');
+    const togglePasswordIcon = document.getElementById('togglePasswordIcon');
+
+    if (togglePasswordBtn && passwordInput) {
+      togglePasswordBtn.addEventListener('click', function () {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        togglePasswordIcon.classList.toggle('bi-eye');
+        togglePasswordIcon.classList.toggle('bi-eye-slash');
+      });
+    }
+  </script>
 </body>
+
 </html>

@@ -1,0 +1,279 @@
+/* ==========================================================================
+   Rank Your Music - Stylesheet (Bootstrap 5.3 Integration)
+   ========================================================================== */
+
+:root {
+  --brand-teal-950: #042f2e;
+  --brand-teal-900: #134e4a;
+  --brand-teal-800: #17474a;
+  --brand-teal-700: #10373a;
+  --brand-teal-600: #14b8a6;
+  --brand-teal-500: #2dd4bf;
+  --brand-teal-200: #badfd6;
+  --brand-teal-100: #dbeee9;
+  --brand-teal-50:  #f0f7f6;
+  --bg-canvas:       #f7faf9;
+  --card-border:     #e2e8f0;
+  --text-primary:    #0f172a;
+  --text-secondary:  #64748b;
+  --text-muted:      #94a3b8;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Brand Button Styles */
+.btn-brand {
+  background-color: var(--brand-teal-800);
+  border-color: var(--brand-teal-800);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+.btn-brand:hover,
+.btn-brand:focus,
+.btn-brand:active {
+  background-color: var(--brand-teal-700) !important;
+  border-color: var(--brand-teal-700) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(23, 71, 74, 0.25);
+}
+
+.btn-brand-outline {
+  background-color: transparent;
+  border-color: var(--brand-teal-800);
+  color: var(--brand-teal-800);
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+.btn-brand-outline:hover,
+.btn-brand-outline:focus,
+.btn-brand-outline:active {
+  background-color: var(--brand-teal-50);
+  border-color: var(--brand-teal-700);
+  color: var(--brand-teal-700);
+}
+
+/* Brand Colors Utilities */
+.text-brand {
+  color: var(--brand-teal-800) !important;
+}
+.bg-brand {
+  background-color: var(--brand-teal-800) !important;
+}
+.bg-brand-soft {
+  background-color: var(--brand-teal-50) !important;
+}
+.border-brand-subtle {
+  border-color: var(--brand-teal-200) !important;
+}
+
+/* Navigation Bar Polish */
+.navbar-brand-logo {
+  width: 34px;
+  height: 34px;
+  background-color: var(--brand-teal-800);
+  color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 6px rgba(23, 71, 74, 0.25);
+}
+
+.nav-link.active-custom {
+  color: var(--brand-teal-800) !important;
+  font-weight: 600;
+  position: relative;
+}
+.nav-link.active-custom::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0.5rem;
+  right: 0.5rem;
+  height: 2.5px;
+  background-color: var(--brand-teal-800);
+  border-radius: 2px;
+}
+
+/* Cards & Elevated Containers */
+.custom-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.85rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.custom-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.ranking-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.85rem;
+  padding: 1.25rem;
+  transition: all 0.2s ease-in-out;
+}
+.ranking-card:hover {
+  border-color: #94a3b8;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  transform: translateY(-2px);
+}
+
+/* Album Art Thumbnails */
+.album-art-sm {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+.album-art-md {
+  width: 58px;
+  height: 58px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.album-art-lg {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* Score Badges */
+.score-badge {
+  background-color: #e7f5f2;
+  color: var(--brand-teal-900);
+  border: 1px solid var(--brand-teal-200);
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-badge-sm {
+  background-color: #e7f5f2;
+  color: var(--brand-teal-900);
+  border: 1px solid var(--brand-teal-200);
+  padding: 0.15rem 0.45rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* Badges */
+.badge-pill-custom {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+}
+
+/* Track list item in ranking detail */
+.track-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  transition: all 0.15s ease-in-out;
+}
+.track-item:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+.track-item.featured {
+  border: 2px solid rgba(20, 184, 166, 0.5);
+  background-color: rgba(240, 253, 250, 0.4);
+}
+.track-rank-number {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #94a3b8;
+  width: 2.25rem;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Distribution Bars */
+.chart-bar-container {
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 4px;
+}
+.chart-bar {
+  flex: 1;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.4s ease;
+}
+
+/* Auth Card Styles */
+.auth-card {
+  max-width: 440px;
+  margin: 0 auto;
+  border-radius: 1.2rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.auth-nav-pills .nav-link {
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.15s ease;
+}
+.auth-nav-pills .nav-link.active {
+  background-color: #ffffff;
+  color: var(--text-primary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+}
+
+/* Footer polish */
+.site-footer {
+  margin-top: auto;
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.8rem;
+  color: #64748b;
+}
