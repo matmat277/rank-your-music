@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rank Your Music - Search Music</title>
-  
+
   <!-- Bootstrap 5.3 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
@@ -16,12 +17,13 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="page.css">
 </head>
+
 <body class="d-flex flex-column min-vh-100">
 
   <!-- BEGIN: Main Header -->
   <header class="w-100 bg-white border-bottom border-light-subtle sticky-top z-3">
     <div class="container-xl d-flex align-items-center justify-content-between py-2.5">
-      
+
       <!-- Brand & Navigation -->
       <div class="d-flex align-items-center gap-4">
         <a href="dashboard.html" class="d-flex align-items-center gap-2 text-decoration-none">
@@ -46,30 +48,41 @@
       <div class="d-flex align-items-center gap-3">
         <!-- Quick Global Search -->
         <div class="d-none d-sm-block position-relative" style="width: 220px;">
-          <input type="search" class="form-control form-control-sm rounded-pill ps-4 bg-light border-light-subtle" placeholder="Busca global rápida...">
+          <input type="search" class="form-control form-control-sm rounded-pill ps-4 bg-light border-light-subtle"
+            placeholder="Busca global rápida...">
           <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-2.5 text-muted small"></i>
         </div>
 
         <!-- Add Ranking Button -->
-        <a href="dashboard.html" class="btn btn-brand btn-sm d-none d-sm-inline-flex align-items-center gap-1.5 px-3 py-1.5 shadow-sm">
+        <a href="dashboard.html"
+          class="btn btn-brand btn-sm d-none d-sm-inline-flex align-items-center gap-1.5 px-3 py-1.5 shadow-sm">
           <i class="bi bi-plus-lg"></i>
           <span>Novo Ranking</span>
         </a>
 
         <!-- User Profile Dropdown -->
         <div class="dropdown">
-          <button class="btn btn-link p-0 text-decoration-none dropdown-toggle d-flex align-items-center gap-2 border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Julian V." class="rounded-circle border border-2 border-secondary-subtle" width="34" height="34">
+          <button class="btn btn-link p-0 text-decoration-none dropdown-toggle d-flex align-items-center gap-2 border-0"
+            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+              alt="Julian V." class="rounded-circle border border-2 border-secondary-subtle" width="34" height="34">
             <span class="d-none d-lg-inline text-dark small fw-semibold">Julian V.</span>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm border-light-subtle small">
             <li class="px-3 py-1 text-muted" style="font-size: 11px;">CONECTADO COMO</li>
             <li class="px-3 py-1 fw-bold text-dark">Julian Rey del Musica</li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="dashboard.html"><i class="bi bi-folder2-open me-2 text-muted"></i>Meus Rankings</a></li>
-            <li><a class="dropdown-item" href="ranking-detail.html"><i class="bi bi-card-checklist me-2 text-muted"></i>Ranking Ativo</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item text-danger" href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Encerrar Sessão</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="dashboard.html"><i class="bi bi-folder2-open me-2 text-muted"></i>Meus
+                Rankings</a></li>
+            <li><a class="dropdown-item" href="ranking-detail.html"><i
+                  class="bi bi-card-checklist me-2 text-muted"></i>Ranking Ativo</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item text-danger" href="index.html"><i
+                  class="bi bi-box-arrow-right me-2"></i>Encerrar Sessão</a></li>
           </ul>
         </div>
 
@@ -80,16 +93,21 @@
 
   <!-- BEGIN: Context Alert Banner -->
   <div class="bg-brand-soft border-bottom border-brand-subtle py-2 px-3">
-    <div class="container-xl d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-1 small text-brand">
+    <div
+      class="container-xl d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-1 small text-brand">
       <div class="d-flex align-items-center gap-2">
-        <span class="badge rounded-circle bg-brand text-white p-1 d-inline-flex align-items-center justify-content-center" style="width: 18px; height: 18px;">
+        <span
+          class="badge rounded-circle bg-brand text-white p-1 d-inline-flex align-items-center justify-content-center"
+          style="width: 18px; height: 18px;">
           <i class="bi bi-check" style="font-size: 12px;"></i>
         </span>
         <span>
-          Ranking de destino ativo: <strong class="fw-bold text-dark">All-Time Essential Electronic</strong> (14 faixas atuais)
+          Ranking de destino ativo: <strong class="fw-bold text-dark">All-Time Essential Electronic</strong> (14 faixas
+          atuais)
         </span>
       </div>
-      <a href="ranking-detail.html" class="text-brand fw-semibold text-decoration-underline small d-inline-flex align-items-center gap-1">
+      <a href="ranking-detail.html"
+        class="text-brand fw-semibold text-decoration-underline small d-inline-flex align-items-center gap-1">
         <span>Visualizar ranking de destino</span>
         <i class="bi bi-arrow-up-right small"></i>
       </a>
@@ -101,15 +119,20 @@
   <section class="bg-white border-bottom border-light-subtle py-4 px-3 shadow-xs">
     <div class="container-xl">
       <h1 class="h4 fw-bold text-dark mb-1">Mecanismo de Pesquisa de Músicas</h1>
-      <p class="text-muted small mb-3">Consulte registros musicais globais (APIs Discogs, MusicBrainz e Spotify) para indexar lançamentos diretamente em suas listas.</p>
+      <p class="text-muted small mb-3">Consulte registros musicais globais (APIs Discogs, MusicBrainz e Spotify) para
+        indexar lançamentos diretamente em suas listas.</p>
 
       <!-- Search Input Toolbar -->
       <div class="row g-2 align-items-stretch">
         <div class="col-12 col-md-7 col-lg-8">
           <div class="position-relative">
-            <input type="text" id="searchInput" class="form-control form-control-sm py-2 ps-4 pe-5 rounded-3 border-light-subtle" placeholder="Pesquise por artista, álbum, faixa ou número de catálogo..." value="Boards of Canada, Aphex Twin">
+            <input type="text" id="searchInput"
+              class="form-control form-control-sm py-2 ps-4 pe-5 rounded-3 border-light-subtle"
+              placeholder="Pesquise por artista, álbum, faixa ou número de catálogo..."
+              value="Boards of Canada, Aphex Twin">
             <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-2.5 text-muted small"></i>
-            <button class="btn btn-sm btn-link position-absolute top-50 end-0 translate-middle-y me-2 text-muted p-0" type="button" onclick="document.getElementById('searchInput').value=''">
+            <button class="btn btn-sm btn-link position-absolute top-50 end-0 translate-middle-y me-2 text-muted p-0"
+              type="button" onclick="document.getElementById('searchInput').value=''">
               <i class="bi bi-x-circle-fill"></i>
             </button>
           </div>
@@ -125,7 +148,9 @@
         </div>
 
         <div class="col-12 col-sm-6 col-md-2 col-lg-2">
-          <button class="btn btn-brand btn-sm py-2 w-100 rounded-3 d-flex align-items-center justify-content-center gap-1.5 shadow-sm" type="button">
+          <button
+            class="btn btn-brand btn-sm py-2 w-100 rounded-3 d-flex align-items-center justify-content-center gap-1.5 shadow-sm"
+            type="button">
             <i class="bi bi-search"></i>
             <span>Pesquisar</span>
           </button>
@@ -156,7 +181,7 @@
 
       <!-- LEFT COLUMN: Search Results (approx 7 cols) -->
       <section class="col-12 col-lg-7">
-        
+
         <!-- Results Header -->
         <div class="d-flex align-items-center justify-content-between pb-2 mb-3 border-bottom border-light-subtle">
           <div class="small fw-bold text-muted text-uppercase" style="letter-spacing: 0.5px;">
@@ -174,13 +199,16 @@
         </div>
 
         <!-- Result Card 1: Selected Ambient Works 85-92 -->
-        <div class="custom-card p-3 mb-3 border border-brand-subtle d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
+        <div
+          class="custom-card p-3 mb-3 border border-brand-subtle d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
           <div class="d-flex align-items-center gap-3 min-w-0">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=140&q=80" alt="Selected Ambient Works 85-92" class="album-art-md flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=140&q=80"
+              alt="Selected Ambient Works 85-92" class="album-art-md flex-shrink-0">
             <div class="min-w-0">
               <div class="d-flex align-items-center gap-2 mb-0.5">
                 <h2 class="h6 fw-bold text-dark text-truncate mb-0">Selected Ambient Works 85-92</h2>
-                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle py-0 px-1.5" style="font-size: 10px;">LP</span>
+                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle py-0 px-1.5"
+                  style="font-size: 10px;">LP</span>
               </div>
               <p class="text-muted small text-truncate mb-1">Aphex Twin • Apollo Records (1992)</p>
               <div class="d-flex align-items-center gap-2 small text-muted" style="font-size: 11px;">
@@ -192,20 +220,25 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-brand btn-sm text-nowrap d-inline-flex align-items-center gap-1 px-3 py-1.5 flex-shrink-0" onclick="selectTrack('Selected Ambient Works 85-92', 'Aphex Twin (1992)', 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=140&q=80', 9.5)">
+          <button
+            class="btn btn-brand btn-sm text-nowrap d-inline-flex align-items-center gap-1 px-3 py-1.5 flex-shrink-0"
+            onclick="selectTrack('Selected Ambient Works 85-92', 'Aphex Twin (1992)', 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=140&q=80', 9.5)">
             <i class="bi bi-plus-lg"></i>
             <span>Adicionar</span>
           </button>
         </div>
 
         <!-- Result Card 2: Untrue -->
-        <div class="custom-card p-3 mb-3 d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
+        <div
+          class="custom-card p-3 mb-3 d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
           <div class="d-flex align-items-center gap-3 min-w-0">
-            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=140&q=80" alt="Untrue" class="album-art-md flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=140&q=80"
+              alt="Untrue" class="album-art-md flex-shrink-0">
             <div class="min-w-0">
               <div class="d-flex align-items-center gap-2 mb-0.5">
                 <h2 class="h6 fw-bold text-dark text-truncate mb-0">Untrue</h2>
-                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle py-0 px-1.5" style="font-size: 10px;">LP</span>
+                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle py-0 px-1.5"
+                  style="font-size: 10px;">LP</span>
               </div>
               <p class="text-muted small text-truncate mb-1">Burial • Hyperdub (2007)</p>
               <div class="d-flex align-items-center gap-2 small text-muted" style="font-size: 11px;">
@@ -217,20 +250,25 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-brand btn-sm text-nowrap d-inline-flex align-items-center gap-1 px-3 py-1.5 flex-shrink-0" onclick="selectTrack('Untrue', 'Burial (2007)', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=140&q=80', 9.4)">
+          <button
+            class="btn btn-brand btn-sm text-nowrap d-inline-flex align-items-center gap-1 px-3 py-1.5 flex-shrink-0"
+            onclick="selectTrack('Untrue', 'Burial (2007)', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=140&q=80', 9.4)">
             <i class="bi bi-plus-lg"></i>
             <span>Adicionar</span>
           </button>
         </div>
 
         <!-- Result Card 3: Geogaddi -->
-        <div class="custom-card p-3 mb-3 d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
+        <div
+          class="custom-card p-3 mb-3 d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
           <div class="d-flex align-items-center gap-3 min-w-0">
-            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=140&q=80" alt="Geogaddi" class="album-art-md flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=140&q=80"
+              alt="Geogaddi" class="album-art-md flex-shrink-0">
             <div class="min-w-0">
               <div class="d-flex align-items-center gap-2 mb-0.5">
                 <h2 class="h6 fw-bold text-dark text-truncate mb-0">Geogaddi</h2>
-                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle py-0 px-1.5" style="font-size: 10px;">LP</span>
+                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle py-0 px-1.5"
+                  style="font-size: 10px;">LP</span>
               </div>
               <p class="text-muted small text-truncate mb-1">Boards of Canada • Warp Records (2002)</p>
               <div class="d-flex align-items-center gap-2 small text-muted" style="font-size: 11px;">
@@ -242,20 +280,25 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-brand btn-sm text-nowrap d-inline-flex align-items-center gap-1 px-3 py-1.5 flex-shrink-0" onclick="selectTrack('Geogaddi', 'Boards of Canada (2002)', 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=140&q=80', 8.9)">
+          <button
+            class="btn btn-brand btn-sm text-nowrap d-inline-flex align-items-center gap-1 px-3 py-1.5 flex-shrink-0"
+            onclick="selectTrack('Geogaddi', 'Boards of Canada (2002)', 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=140&q=80', 8.9)">
             <i class="bi bi-plus-lg"></i>
             <span>Adicionar</span>
           </button>
         </div>
 
         <!-- Result Card 4: Music Has the Right to Children -->
-        <div class="custom-card p-3 mb-3 d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
+        <div
+          class="custom-card p-3 mb-3 d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
           <div class="d-flex align-items-center gap-3 min-w-0">
-            <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=140&q=80" alt="Music Has the Right to Children" class="album-art-md flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=140&q=80"
+              alt="Music Has the Right to Children" class="album-art-md flex-shrink-0">
             <div class="min-w-0">
               <div class="d-flex align-items-center gap-2 mb-0.5">
                 <h2 class="h6 fw-bold text-dark text-truncate mb-0">Music Has the Right to Children</h2>
-                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle py-0 px-1.5" style="font-size: 10px;">LP</span>
+                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle py-0 px-1.5"
+                  style="font-size: 10px;">LP</span>
               </div>
               <p class="text-muted small text-truncate mb-1">Boards of Canada • Warp Records (1998)</p>
               <div class="d-flex align-items-center gap-2 small text-muted" style="font-size: 11px;">
@@ -267,14 +310,17 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-brand btn-sm text-nowrap d-inline-flex align-items-center gap-1 px-3 py-1.5 flex-shrink-0" onclick="selectTrack('Music Has the Right to Children', 'Boards of Canada (1998)', 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=140&q=80', 9.5)">
+          <button
+            class="btn btn-brand btn-sm text-nowrap d-inline-flex align-items-center gap-1 px-3 py-1.5 flex-shrink-0"
+            onclick="selectTrack('Music Has the Right to Children', 'Boards of Canada (1998)', 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=140&q=80', 9.5)">
             <i class="bi bi-plus-lg"></i>
             <span>Adicionar</span>
           </button>
         </div>
 
         <!-- Pagination -->
-        <div class="d-flex align-items-center justify-content-between pt-3 border-top border-light-subtle small text-muted">
+        <div
+          class="d-flex align-items-center justify-content-between pt-3 border-top border-light-subtle small text-muted">
           <span>Mostrando 1 a 4 de 4 resultados</span>
           <nav aria-label="Page navigation">
             <ul class="pagination pagination-sm mb-0">
@@ -289,7 +335,7 @@
 
       <!-- RIGHT COLUMN: Active Selection Sidebar (approx 5 cols) -->
       <aside class="col-12 col-lg-5">
-        
+
         <!-- Primary Action Card: Add to Ranking Panel -->
         <div class="custom-card overflow-hidden mb-4 border-brand-subtle">
           <!-- Card Header -->
@@ -304,7 +350,8 @@
           <div class="p-3 p-sm-4">
             <!-- Target Ranking Selector Dropdown -->
             <div class="mb-3">
-              <label for="targetRankingSelect" class="form-label small fw-semibold text-secondary">Ranking de Destino</label>
+              <label for="targetRankingSelect" class="form-label small fw-semibold text-secondary">Ranking de
+                Destino</label>
               <select id="targetRankingSelect" class="form-select form-select-sm py-2">
                 <option selected>All-Time Essential Electronic (Ativo)</option>
                 <option>2024 Heavy Rotation &amp; Standouts</option>
@@ -316,9 +363,12 @@
 
             <!-- Preview Card of currently selected item -->
             <div class="bg-light border border-light-subtle rounded-3 p-2.5 d-flex align-items-start gap-2.5 mb-3">
-              <img id="sidebarAlbumThumb" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=120&q=80" alt="Preview album" class="album-art-sm flex-shrink-0">
+              <img id="sidebarAlbumThumb"
+                src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=120&q=80"
+                alt="Preview album" class="album-art-sm flex-shrink-0">
               <div class="min-w-0 flex-grow-1">
-                <h3 id="sidebarAlbumTitle" class="small fw-bold text-dark text-truncate mb-0">Selected Ambient Works 85-92</h3>
+                <h3 id="sidebarAlbumTitle" class="small fw-bold text-dark text-truncate mb-0">Selected Ambient Works
+                  85-92</h3>
                 <p id="sidebarAlbumArtist" class="text-muted small mb-1" style="font-size: 11px;">Aphex Twin (1992)</p>
                 <span class="badge bg-brand-soft text-brand border border-brand-subtle" style="font-size: 10px;">
                   Status: Pronto para salvar na posição #01
@@ -329,7 +379,8 @@
             <!-- Rating Input & Position Controls -->
             <div class="mb-3">
               <div class="d-flex align-items-center justify-content-between mb-1">
-                <label for="ratingRange" class="form-label small fw-semibold text-secondary mb-0">Nota Atribuída / Score</label>
+                <label for="ratingRange" class="form-label small fw-semibold text-secondary mb-0">Nota Atribuída /
+                  Score</label>
                 <span id="ratingDisplay" class="score-badge-sm">9.5 / 10.0</span>
               </div>
               <input type="range" class="form-range" id="ratingRange" min="1.0" max="10.0" step="0.1" value="9.5">
@@ -362,13 +413,17 @@
 
             <!-- Notes & Review textarea -->
             <div class="mb-3">
-              <label for="reviewNotes" class="form-label small fw-semibold text-secondary">Anotações / Comentário Crítico (Opcional)</label>
-              <textarea class="form-control form-control-sm" id="reviewNotes" rows="2" placeholder="Descreva os motivos pelo qual o álbum ocupa essa posição..."></textarea>
+              <label for="reviewNotes" class="form-label small fw-semibold text-secondary">Anotações / Comentário
+                Crítico (Opcional)</label>
+              <textarea class="form-control form-control-sm" id="reviewNotes" rows="2"
+                placeholder="Descreva os motivos pelo qual o álbum ocupa essa posição..."></textarea>
             </div>
 
             <!-- Action Buttons -->
             <div class="d-flex align-items-center gap-2 pt-1">
-              <button class="btn btn-brand btn-sm flex-grow-1 py-2 d-inline-flex align-items-center justify-content-center gap-1.5 shadow-sm" type="button" onclick="confirmAddTrack()">
+              <button
+                class="btn btn-brand btn-sm flex-grow-1 py-2 d-inline-flex align-items-center justify-content-center gap-1.5 shadow-sm"
+                type="button" onclick="confirmAddTrack()">
                 <i class="bi bi-check2-circle"></i>
                 <span>Confirmar &amp; Adicionar</span>
               </button>
@@ -388,7 +443,8 @@
           </div>
 
           <div class="list-group list-group-flush small">
-            <div class="list-group-item px-0 py-2 d-flex align-items-center justify-content-between border-light-subtle">
+            <div
+              class="list-group-item px-0 py-2 d-flex align-items-center justify-content-between border-light-subtle">
               <div class="d-flex align-items-center gap-2 min-w-0">
                 <span class="fw-bold text-muted" style="width: 25px;">#01</span>
                 <div class="min-w-0">
@@ -399,7 +455,8 @@
               <span class="score-badge-sm flex-shrink-0">9.8</span>
             </div>
 
-            <div class="list-group-item px-0 py-2 d-flex align-items-center justify-content-between border-light-subtle">
+            <div
+              class="list-group-item px-0 py-2 d-flex align-items-center justify-content-between border-light-subtle">
               <div class="d-flex align-items-center gap-2 min-w-0">
                 <span class="fw-bold text-muted" style="width: 25px;">#02</span>
                 <div class="min-w-0">
@@ -410,7 +467,8 @@
               <span class="score-badge-sm flex-shrink-0">9.5</span>
             </div>
 
-            <div class="list-group-item px-0 py-2 d-flex align-items-center justify-content-between border-light-subtle">
+            <div
+              class="list-group-item px-0 py-2 d-flex align-items-center justify-content-between border-light-subtle">
               <div class="d-flex align-items-center gap-2 min-w-0">
                 <span class="fw-bold text-muted" style="width: 25px;">#03</span>
                 <div class="min-w-0">
@@ -431,12 +489,14 @@
         </div>
 
         <!-- Help & Tips Card -->
-        <div class="alert alert-light border border-brand-subtle rounded-3 p-3 small d-flex align-items-start gap-2.5 mb-0">
+        <div
+          class="alert alert-light border border-brand-subtle rounded-3 p-3 small d-flex align-items-start gap-2.5 mb-0">
           <i class="bi bi-info-circle-fill text-brand fs-5 flex-shrink-0"></i>
           <div>
             <div class="fw-bold text-dark mb-0.5">Você sabia?</div>
             <div class="text-secondary" style="font-size: 11px;">
-              Ao adicionar um álbum repetido, o sistema avisará se ele já consta em outras listas ativas da sua conta para evitar duplicatas indesejadas.
+              Ao adicionar um álbum repetido, o sistema avisará se ele já consta em outras listas ativas da sua conta
+              para evitar duplicatas indesejadas.
             </div>
           </div>
         </div>
@@ -449,7 +509,8 @@
 
   <!-- Toast Notification (Bootstrap 5.3) -->
   <div class="toast-container position-fixed bottom-0 end-0 p-3 z-3">
-    <div id="addTrackToast" class="toast align-items-center text-bg-dark border-0 shadow-lg rounded-3" role="alert" aria-live="assertive" aria-atomic="true">
+    <div id="addTrackToast" class="toast align-items-center text-bg-dark border-0 shadow-lg rounded-3" role="alert"
+      aria-live="assertive" aria-atomic="true">
       <div class="d-flex">
         <div class="toast-body d-flex align-items-center gap-2">
           <i class="bi bi-check-circle-fill text-success fs-5"></i>
@@ -457,7 +518,8 @@
             Faixa <strong id="toastTrackName">"Selected Ambient Works 85-92"</strong> adicionada ao ranking!
           </div>
         </div>
-        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
       </div>
     </div>
   </div>
@@ -487,7 +549,7 @@
     const ratingRange = document.getElementById('ratingRange');
     const ratingDisplay = document.getElementById('ratingDisplay');
     if (ratingRange && ratingDisplay) {
-      ratingRange.addEventListener('input', function() {
+      ratingRange.addEventListener('input', function () {
         ratingDisplay.textContent = parseFloat(this.value).toFixed(1) + ' / 10.0';
       });
     }
@@ -512,4 +574,5 @@
     }
   </script>
 </body>
+
 </html>

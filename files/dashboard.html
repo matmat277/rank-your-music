@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Rankings - Rank Your Music</title>
-  
+
   <!-- Bootstrap 5.3 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
@@ -16,12 +17,13 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="page.css">
 </head>
+
 <body class="d-flex flex-column min-vh-100">
 
   <!-- BEGIN: Top Navigation Bar -->
   <header class="w-100 bg-white border-bottom border-light-subtle sticky-top z-3">
     <div class="container-xl d-flex align-items-center justify-content-between py-2.5">
-      
+
       <!-- Brand Logo and Links -->
       <div class="d-flex align-items-center gap-4">
         <a href="dashboard.html" class="d-flex align-items-center gap-2 text-decoration-none">
@@ -46,21 +48,26 @@
       <div class="d-flex align-items-center gap-3">
         <!-- Quick Search -->
         <div class="d-none d-sm-block position-relative" style="width: 220px;">
-          <input type="search" class="form-control form-control-sm rounded-pill ps-4 bg-light border-light-subtle" placeholder="Search albums, artists...">
+          <input type="search" class="form-control form-control-sm rounded-pill ps-4 bg-light border-light-subtle"
+            placeholder="Search albums, artists...">
           <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-2.5 text-muted small"></i>
         </div>
 
         <!-- Notification Bell -->
         <div class="dropdown">
-          <button class="btn btn-sm btn-light border-0 position-relative p-2 rounded-circle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Notificações">
+          <button class="btn btn-sm btn-light border-0 position-relative p-2 rounded-circle" type="button"
+            data-bs-toggle="dropdown" aria-expanded="false" title="Notificações">
             <i class="bi bi-bell text-secondary fs-6"></i>
-            <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+            <span
+              class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
               <span class="visually-hidden">Novos alertas</span>
             </span>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm border-light-subtle small p-2" style="width: 280px;">
             <li class="dropdown-header fw-bold text-dark">Notificações Recentes</li>
-            <li><hr class="dropdown-divider"></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
             <li class="p-2 bg-light rounded-2 mb-1">
               <div class="fw-semibold text-dark">Ranking Atualizado</div>
               <div class="text-muted" style="font-size: 11px;">"All-Time Essential Electronic" sincronizado.</div>
@@ -73,26 +80,37 @@
         </div>
 
         <!-- New Ranking Button -->
-        <button type="button" class="btn btn-brand btn-sm d-none d-sm-inline-flex align-items-center gap-1.5 px-3 py-1.5 shadow-sm" data-bs-toggle="modal" data-bs-target="#newRankingModal">
+        <button type="button"
+          class="btn btn-brand btn-sm d-none d-sm-inline-flex align-items-center gap-1.5 px-3 py-1.5 shadow-sm"
+          data-bs-toggle="modal" data-bs-target="#newRankingModal">
           <i class="bi bi-plus-lg"></i>
           <span>New Ranking</span>
         </button>
 
         <!-- User Profile Dropdown -->
         <div class="dropdown">
-          <button class="btn btn-link p-0 text-decoration-none dropdown-toggle d-flex align-items-center gap-2 border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Julian V." class="rounded-circle border border-2 border-secondary-subtle" width="34" height="34">
+          <button class="btn btn-link p-0 text-decoration-none dropdown-toggle d-flex align-items-center gap-2 border-0"
+            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+              alt="Julian V." class="rounded-circle border border-2 border-secondary-subtle" width="34" height="34">
             <span class="d-none d-lg-inline text-dark small fw-semibold">Julian V.</span>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm border-light-subtle small">
             <li class="px-3 py-1 text-muted" style="font-size: 11px;">CONECTADO COMO</li>
             <li class="px-3 py-1 fw-bold text-dark">Julian Rey del Musica</li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="dashboard.html"><i class="bi bi-folder2-open me-2 text-muted"></i>Meus Rankings</a></li>
-            <li><a class="dropdown-item" href="search.html"><i class="bi bi-music-note-beamed me-2 text-muted"></i>Pesquisar Músicas</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="dashboard.html"><i class="bi bi-folder2-open me-2 text-muted"></i>Meus
+                Rankings</a></li>
+            <li><a class="dropdown-item" href="search.html"><i
+                  class="bi bi-music-note-beamed me-2 text-muted"></i>Pesquisar Músicas</a></li>
             <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2 text-muted"></i>Configurações</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item text-danger" href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Encerrar Sessão</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item text-danger" href="index.html"><i
+                  class="bi bi-box-arrow-right me-2"></i>Encerrar Sessão</a></li>
           </ul>
         </div>
 
@@ -108,13 +126,16 @@
     <section class="mb-4">
       <div class="d-flex flex-column flex-md-row align-items-start justify-content-between gap-3">
         <div>
-          <span class="badge text-uppercase bg-secondary-subtle text-secondary fw-bold px-2 py-1 mb-2" style="font-size: 10px; letter-spacing: 0.5px;">CURATOR DASHBOARD</span>
+          <span class="badge text-uppercase bg-secondary-subtle text-secondary fw-bold px-2 py-1 mb-2"
+            style="font-size: 10px; letter-spacing: 0.5px;">CURATOR DASHBOARD</span>
           <h1 class="h2 fw-bold text-dark mb-1">My Rankings</h1>
-          <p class="text-muted small mb-0">Gerencie, compartilhe e reordene seus cânones musicais com rigor e precisão crítica.</p>
+          <p class="text-muted small mb-0">Gerencie, compartilhe e reordene seus cânones musicais com rigor e precisão
+            crítica.</p>
         </div>
 
         <!-- Metric Badges Pill -->
-        <div class="bg-white border border-light-subtle rounded-pill px-3 py-1.5 d-flex align-items-center gap-3 shadow-xs">
+        <div
+          class="bg-white border border-light-subtle rounded-pill px-3 py-1.5 d-flex align-items-center gap-3 shadow-xs">
           <div class="d-flex align-items-center gap-1.5 small">
             <i class="bi bi-disc text-secondary"></i>
             <span class="fw-bold text-dark">84</span>
@@ -135,16 +156,19 @@
           <span>All</span>
           <span class="badge bg-dark-subtle text-light rounded-pill px-2">8</span>
         </button>
-        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1 d-flex align-items-center gap-1.5 bg-white border-light-subtle text-secondary">
+        <button
+          class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1 d-flex align-items-center gap-1.5 bg-white border-light-subtle text-secondary">
           <span>Public</span>
           <span class="badge bg-light text-muted rounded-pill px-2">5</span>
         </button>
-        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1 d-flex align-items-center gap-1.5 bg-white border-light-subtle text-secondary">
+        <button
+          class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1 d-flex align-items-center gap-1.5 bg-white border-light-subtle text-secondary">
           <i class="bi bi-lock-fill small"></i>
           <span>Private</span>
           <span class="badge bg-light text-muted rounded-pill px-2">3</span>
         </button>
-        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1 d-flex align-items-center gap-1.5 bg-white border-light-subtle text-secondary">
+        <button
+          class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1 d-flex align-items-center gap-1.5 bg-white border-light-subtle text-secondary">
           <span>Drafts</span>
           <span class="badge bg-light text-muted rounded-pill px-2">1</span>
         </button>
@@ -154,7 +178,8 @@
       <div class="row g-2 align-items-center justify-content-between mt-3">
         <div class="col-12 col-md-5">
           <div class="position-relative">
-            <input type="text" class="form-control form-control-sm rounded-3 ps-4 bg-white border-light-subtle" placeholder="Filtrar rankings por título, artista ou gênero...">
+            <input type="text" class="form-control form-control-sm rounded-3 ps-4 bg-white border-light-subtle"
+              placeholder="Filtrar rankings por título, artista ou gênero...">
             <i class="bi bi-funnel position-absolute top-50 start-0 translate-middle-y ms-2.5 text-muted small"></i>
           </div>
         </div>
@@ -168,7 +193,8 @@
               <option>Mais Músicas Ranqueadas</option>
             </select>
           </div>
-          <button type="button" class="btn btn-brand btn-sm d-inline-flex align-items-center gap-1" data-bs-toggle="modal" data-bs-target="#newRankingModal">
+          <button type="button" class="btn btn-brand btn-sm d-inline-flex align-items-center gap-1"
+            data-bs-toggle="modal" data-bs-target="#newRankingModal">
             <i class="bi bi-plus-lg"></i>
             <span>Criar</span>
           </button>
@@ -186,60 +212,78 @@
             <!-- Header Badges -->
             <div class="d-flex align-items-center justify-content-between mb-2">
               <div class="d-flex align-items-center gap-2">
-                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill py-1 px-2 d-inline-flex align-items-center gap-1">
+                <span
+                  class="badge bg-success-subtle text-success border border-success-subtle rounded-pill py-1 px-2 d-inline-flex align-items-center gap-1">
                   <span class="p-1 bg-success rounded-circle"></span>
                   Público
                 </span>
                 <span class="text-muted small" style="font-size: 11px;">Atualizado há 2 horas</span>
               </div>
               <div class="dropdown">
-                <button class="btn btn-sm btn-link text-muted p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-sm btn-link text-muted p-0" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   <i class="bi bi-three-dots"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end small shadow-sm border-light-subtle">
-                  <li><a class="dropdown-item" href="ranking-detail.html"><i class="bi bi-eye me-2"></i>Visualizar Detalhes</a></li>
-                  <li><a class="dropdown-item" href="search.html"><i class="bi bi-plus-circle me-2"></i>Adicionar Faixas</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item text-danger" href="#" onclick="confirm('Deseja realmente excluir este ranking?')"><i class="bi bi-trash me-2"></i>Excluir</a></li>
+                  <li><a class="dropdown-item" href="ranking-detail.html"><i class="bi bi-eye me-2"></i>Visualizar
+                      Detalhes</a></li>
+                  <li><a class="dropdown-item" href="search.html"><i class="bi bi-plus-circle me-2"></i>Adicionar
+                      Faixas</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item text-danger" href="#"
+                      onclick="confirm('Deseja realmente excluir este ranking?')"><i
+                        class="bi bi-trash me-2"></i>Excluir</a></li>
                 </ul>
               </div>
             </div>
 
             <!-- Title & Description -->
             <h2 class="h5 fw-bold text-dark mb-1">
-              <a href="ranking-detail.html" class="text-dark text-decoration-none hover-teal">All-Time Essential Electronic</a>
+              <a href="ranking-detail.html" class="text-dark text-decoration-none hover-teal">All-Time Essential
+                Electronic</a>
             </h2>
-            <p class="text-muted small mb-3">IDM, minimal ambient, síntese modular e sistemas de som definitivos do final dos anos 90.</p>
+            <p class="text-muted small mb-3">IDM, minimal ambient, síntese modular e sistemas de som definitivos do
+              final dos anos 90.</p>
 
             <!-- Thumbnails Row & Quality Metric -->
             <div class="d-flex align-items-end justify-content-between gap-2 mb-3">
               <div class="d-flex align-items-center gap-1.5">
-                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=120&q=80" alt="Selected Ambient Works" class="album-art-sm">
-                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=120&q=80" alt="Geogaddi" class="album-art-sm">
-                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=120&q=80" alt="Untrue" class="album-art-sm">
-                <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=120&q=80" alt="Music Has the Right" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=120&q=80"
+                  alt="Selected Ambient Works" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=120&q=80"
+                  alt="Geogaddi" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=120&q=80"
+                  alt="Untrue" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=120&q=80"
+                  alt="Music Has the Right" class="album-art-sm">
               </div>
 
               <!-- Score Pill -->
               <div class="score-badge flex-column align-items-end text-end py-1 px-2">
-                <span class="text-muted fw-bold text-uppercase" style="font-size: 8px; letter-spacing: 0.5px;">Avg Score</span>
+                <span class="text-muted fw-bold text-uppercase" style="font-size: 8px; letter-spacing: 0.5px;">Avg
+                  Score</span>
                 <span class="fw-black text-brand fs-6 lh-1">9.2</span>
               </div>
             </div>
           </div>
 
           <!-- Card Footer -->
-          <div class="pt-3 border-top border-light-subtle d-flex align-items-center justify-content-between small text-muted">
+          <div
+            class="pt-3 border-top border-light-subtle d-flex align-items-center justify-content-between small text-muted">
             <div class="d-flex align-items-center gap-2" style="font-size: 11px;">
               <span><i class="bi bi-music-note-list me-1"></i><strong class="text-dark">24</strong> Faixas</span>
               <span>•</span>
               <span><i class="bi bi-eye me-1"></i>1.4k views</span>
             </div>
             <div class="d-flex align-items-center gap-1.5">
-              <button class="btn btn-sm btn-outline-secondary border-0 p-1 text-muted" title="Compartilhar" onclick="alert('Link copiado para a área de transferência!')">
+              <button class="btn btn-sm btn-outline-secondary border-0 p-1 text-muted" title="Compartilhar"
+                onclick="alert('Link copiado para a área de transferência!')">
                 <i class="bi bi-share"></i>
               </button>
-              <a href="ranking-detail.html" class="btn btn-outline-secondary btn-sm py-1 px-2.5 small fw-semibold text-dark bg-white">
+              <a href="ranking-detail.html"
+                class="btn btn-outline-secondary btn-sm py-1 px-2.5 small fw-semibold text-dark bg-white">
                 <i class="bi bi-pencil-square me-1 text-muted"></i>Editar Ranking
               </a>
             </div>
@@ -254,58 +298,72 @@
             <!-- Header Badges -->
             <div class="d-flex align-items-center justify-content-between mb-2">
               <div class="d-flex align-items-center gap-2">
-                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill py-1 px-2 d-inline-flex align-items-center gap-1">
+                <span
+                  class="badge bg-success-subtle text-success border border-success-subtle rounded-pill py-1 px-2 d-inline-flex align-items-center gap-1">
                   <span class="p-1 bg-success rounded-circle"></span>
                   Público
                 </span>
                 <span class="text-muted small" style="font-size: 11px;">Atualizado ontem</span>
               </div>
               <div class="dropdown">
-                <button class="btn btn-sm btn-link text-muted p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-sm btn-link text-muted p-0" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   <i class="bi bi-three-dots"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end small shadow-sm border-light-subtle">
-                  <li><a class="dropdown-item" href="ranking-detail.html"><i class="bi bi-eye me-2"></i>Visualizar Detalhes</a></li>
-                  <li><a class="dropdown-item" href="search.html"><i class="bi bi-plus-circle me-2"></i>Adicionar Faixas</a></li>
+                  <li><a class="dropdown-item" href="ranking-detail.html"><i class="bi bi-eye me-2"></i>Visualizar
+                      Detalhes</a></li>
+                  <li><a class="dropdown-item" href="search.html"><i class="bi bi-plus-circle me-2"></i>Adicionar
+                      Faixas</a></li>
                 </ul>
               </div>
             </div>
 
             <!-- Title & Description -->
             <h2 class="h5 fw-bold text-dark mb-1">
-              <a href="ranking-detail.html" class="text-dark text-decoration-none">2024 Heavy Rotation &amp; Standouts</a>
+              <a href="ranking-detail.html" class="text-dark text-decoration-none">2024 Heavy Rotation &amp;
+                Standouts</a>
             </h2>
-            <p class="text-muted small mb-3">Art rock de vanguarda, chamber pop exploratório e lançamentos que dominaram as audições.</p>
+            <p class="text-muted small mb-3">Art rock de vanguarda, chamber pop exploratório e lançamentos que dominaram
+              as audições.</p>
 
             <!-- Thumbnails Row & Quality Metric -->
             <div class="d-flex align-items-end justify-content-between gap-2 mb-3">
               <div class="d-flex align-items-center gap-1.5">
-                <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=120&q=80" alt="Cover 1" class="album-art-sm">
-                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=120&q=80" alt="Cover 2" class="album-art-sm">
-                <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?auto=format&fit=crop&w=120&q=80" alt="Cover 3" class="album-art-sm">
-                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=120&q=80" alt="Cover 4" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=120&q=80"
+                  alt="Cover 1" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=120&q=80"
+                  alt="Cover 2" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?auto=format&fit=crop&w=120&q=80"
+                  alt="Cover 3" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=120&q=80"
+                  alt="Cover 4" class="album-art-sm">
               </div>
 
               <!-- Score Pill -->
               <div class="score-badge flex-column align-items-end text-end py-1 px-2">
-                <span class="text-muted fw-bold text-uppercase" style="font-size: 8px; letter-spacing: 0.5px;">Avg Score</span>
+                <span class="text-muted fw-bold text-uppercase" style="font-size: 8px; letter-spacing: 0.5px;">Avg
+                  Score</span>
                 <span class="fw-black text-brand fs-6 lh-1">8.8</span>
               </div>
             </div>
           </div>
 
           <!-- Card Footer -->
-          <div class="pt-3 border-top border-light-subtle d-flex align-items-center justify-content-between small text-muted">
+          <div
+            class="pt-3 border-top border-light-subtle d-flex align-items-center justify-content-between small text-muted">
             <div class="d-flex align-items-center gap-2" style="font-size: 11px;">
               <span><i class="bi bi-music-note-list me-1"></i><strong class="text-dark">16</strong> Faixas</span>
               <span>•</span>
               <span><i class="bi bi-eye me-1"></i>620 views</span>
             </div>
             <div class="d-flex align-items-center gap-1.5">
-              <button class="btn btn-sm btn-outline-secondary border-0 p-1 text-muted" title="Compartilhar" onclick="alert('Link copiado!')">
+              <button class="btn btn-sm btn-outline-secondary border-0 p-1 text-muted" title="Compartilhar"
+                onclick="alert('Link copiado!')">
                 <i class="bi bi-share"></i>
               </button>
-              <a href="ranking-detail.html" class="btn btn-outline-secondary btn-sm py-1 px-2.5 small fw-semibold text-dark bg-white">
+              <a href="ranking-detail.html"
+                class="btn btn-outline-secondary btn-sm py-1 px-2.5 small fw-semibold text-dark bg-white">
                 <i class="bi bi-pencil-square me-1 text-muted"></i>Editar Ranking
               </a>
             </div>
@@ -320,19 +378,23 @@
             <!-- Header Badges -->
             <div class="d-flex align-items-center justify-content-between mb-2">
               <div class="d-flex align-items-center gap-2">
-                <span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle rounded-pill py-1 px-2 d-inline-flex align-items-center gap-1">
+                <span
+                  class="badge bg-secondary-subtle text-secondary border border-secondary-subtle rounded-pill py-1 px-2 d-inline-flex align-items-center gap-1">
                   <i class="bi bi-lock-fill" style="font-size: 9px;"></i>
                   Privado
                 </span>
                 <span class="text-muted small" style="font-size: 11px;">Atualizado há 3 dias</span>
               </div>
               <div class="dropdown">
-                <button class="btn btn-sm btn-link text-muted p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-sm btn-link text-muted p-0" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   <i class="bi bi-three-dots"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end small shadow-sm border-light-subtle">
-                  <li><a class="dropdown-item" href="ranking-detail.html"><i class="bi bi-eye me-2"></i>Visualizar Detalhes</a></li>
-                  <li><a class="dropdown-item" href="search.html"><i class="bi bi-plus-circle me-2"></i>Adicionar Faixas</a></li>
+                  <li><a class="dropdown-item" href="ranking-detail.html"><i class="bi bi-eye me-2"></i>Visualizar
+                      Detalhes</a></li>
+                  <li><a class="dropdown-item" href="search.html"><i class="bi bi-plus-circle me-2"></i>Adicionar
+                      Faixas</a></li>
                 </ul>
               </div>
             </div>
@@ -341,34 +403,42 @@
             <h2 class="h5 fw-bold text-dark mb-1">
               <a href="ranking-detail.html" class="text-dark text-decoration-none">Late Night Ambient &amp; Drone</a>
             </h2>
-            <p class="text-muted small mb-3">Camadas contínuas de sintetizadores, ruídos de fita analógica e texturas geradas para madrugada.</p>
+            <p class="text-muted small mb-3">Camadas contínuas de sintetizadores, ruídos de fita analógica e texturas
+              geradas para madrugada.</p>
 
             <!-- Thumbnails Row & Quality Metric -->
             <div class="d-flex align-items-end justify-content-between gap-2 mb-3">
               <div class="d-flex align-items-center gap-1.5">
-                <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=120&q=80" alt="Ambient 1" class="album-art-sm">
-                <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=120&q=80" alt="Ambient 2" class="album-art-sm">
-                <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=120&q=80" alt="Ambient 3" class="album-art-sm">
-                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=120&q=80" alt="Ambient 4" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=120&q=80"
+                  alt="Ambient 1" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=120&q=80"
+                  alt="Ambient 2" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=120&q=80"
+                  alt="Ambient 3" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=120&q=80"
+                  alt="Ambient 4" class="album-art-sm">
               </div>
 
               <!-- Score Pill -->
               <div class="score-badge flex-column align-items-end text-end py-1 px-2">
-                <span class="text-muted fw-bold text-uppercase" style="font-size: 8px; letter-spacing: 0.5px;">Avg Score</span>
+                <span class="text-muted fw-bold text-uppercase" style="font-size: 8px; letter-spacing: 0.5px;">Avg
+                  Score</span>
                 <span class="fw-black text-brand fs-6 lh-1">9.4</span>
               </div>
             </div>
           </div>
 
           <!-- Card Footer -->
-          <div class="pt-3 border-top border-light-subtle d-flex align-items-center justify-content-between small text-muted">
+          <div
+            class="pt-3 border-top border-light-subtle d-flex align-items-center justify-content-between small text-muted">
             <div class="d-flex align-items-center gap-2" style="font-size: 11px;">
               <span><i class="bi bi-music-note-list me-1"></i><strong class="text-dark">32</strong> Faixas</span>
               <span>•</span>
               <span><i class="bi bi-person-lock me-1"></i>Apenas você</span>
             </div>
             <div class="d-flex align-items-center gap-1.5">
-              <a href="ranking-detail.html" class="btn btn-outline-secondary btn-sm py-1 px-2.5 small fw-semibold text-dark bg-white">
+              <a href="ranking-detail.html"
+                class="btn btn-outline-secondary btn-sm py-1 px-2.5 small fw-semibold text-dark bg-white">
                 <i class="bi bi-pencil-square me-1 text-muted"></i>Editar Ranking
               </a>
             </div>
@@ -383,19 +453,23 @@
             <!-- Header Badges -->
             <div class="d-flex align-items-center justify-content-between mb-2">
               <div class="d-flex align-items-center gap-2">
-                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill py-1 px-2 d-inline-flex align-items-center gap-1">
+                <span
+                  class="badge bg-success-subtle text-success border border-success-subtle rounded-pill py-1 px-2 d-inline-flex align-items-center gap-1">
                   <span class="p-1 bg-success rounded-circle"></span>
                   Público
                 </span>
                 <span class="text-muted small" style="font-size: 11px;">Atualizado em 12 Nov</span>
               </div>
               <div class="dropdown">
-                <button class="btn btn-sm btn-link text-muted p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-sm btn-link text-muted p-0" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   <i class="bi bi-three-dots"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end small shadow-sm border-light-subtle">
-                  <li><a class="dropdown-item" href="ranking-detail.html"><i class="bi bi-eye me-2"></i>Visualizar Detalhes</a></li>
-                  <li><a class="dropdown-item" href="search.html"><i class="bi bi-plus-circle me-2"></i>Adicionar Faixas</a></li>
+                  <li><a class="dropdown-item" href="ranking-detail.html"><i class="bi bi-eye me-2"></i>Visualizar
+                      Detalhes</a></li>
+                  <li><a class="dropdown-item" href="search.html"><i class="bi bi-plus-circle me-2"></i>Adicionar
+                      Faixas</a></li>
                 </ul>
               </div>
             </div>
@@ -404,37 +478,46 @@
             <h2 class="h5 fw-bold text-dark mb-1">
               <a href="ranking-detail.html" class="text-dark text-decoration-none">Post-Punk &amp; No Wave Deep Dive</a>
             </h2>
-            <p class="text-muted small mb-3">Guitarras angulares, precisão rítmica fria, linhas de baixo dub e gravações cruas de NY.</p>
+            <p class="text-muted small mb-3">Guitarras angulares, precisão rítmica fria, linhas de baixo dub e gravações
+              cruas de NY.</p>
 
             <!-- Thumbnails Row & Quality Metric -->
             <div class="d-flex align-items-end justify-content-between gap-2 mb-3">
               <div class="d-flex align-items-center gap-1.5">
-                <img src="https://images.unsplash.com/photo-1464375117522-1311d6a5b81f?auto=format&fit=crop&w=120&q=80" alt="Post Punk 1" class="album-art-sm">
-                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=120&q=80" alt="Post Punk 2" class="album-art-sm">
-                <img src="https://images.unsplash.com/photo-1520523839898-50712825e3a7?auto=format&fit=crop&w=120&q=80" alt="Post Punk 3" class="album-art-sm">
-                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=120&q=80" alt="Post Punk 4" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1464375117522-1311d6a5b81f?auto=format&fit=crop&w=120&q=80"
+                  alt="Post Punk 1" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=120&q=80"
+                  alt="Post Punk 2" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1520523839898-50712825e3a7?auto=format&fit=crop&w=120&q=80"
+                  alt="Post Punk 3" class="album-art-sm">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=120&q=80"
+                  alt="Post Punk 4" class="album-art-sm">
               </div>
 
               <!-- Score Pill -->
               <div class="score-badge flex-column align-items-end text-end py-1 px-2">
-                <span class="text-muted fw-bold text-uppercase" style="font-size: 8px; letter-spacing: 0.5px;">Avg Score</span>
+                <span class="text-muted fw-bold text-uppercase" style="font-size: 8px; letter-spacing: 0.5px;">Avg
+                  Score</span>
                 <span class="fw-black text-brand fs-6 lh-1">8.9</span>
               </div>
             </div>
           </div>
 
           <!-- Card Footer -->
-          <div class="pt-3 border-top border-light-subtle d-flex align-items-center justify-content-between small text-muted">
+          <div
+            class="pt-3 border-top border-light-subtle d-flex align-items-center justify-content-between small text-muted">
             <div class="d-flex align-items-center gap-2" style="font-size: 11px;">
               <span><i class="bi bi-music-note-list me-1"></i><strong class="text-dark">12</strong> Faixas</span>
               <span>•</span>
               <span><i class="bi bi-eye me-1"></i>890 views</span>
             </div>
             <div class="d-flex align-items-center gap-1.5">
-              <button class="btn btn-sm btn-outline-secondary border-0 p-1 text-muted" title="Compartilhar" onclick="alert('Link copiado!')">
+              <button class="btn btn-sm btn-outline-secondary border-0 p-1 text-muted" title="Compartilhar"
+                onclick="alert('Link copiado!')">
                 <i class="bi bi-share"></i>
               </button>
-              <a href="ranking-detail.html" class="btn btn-outline-secondary btn-sm py-1 px-2.5 small fw-semibold text-dark bg-white">
+              <a href="ranking-detail.html"
+                class="btn btn-outline-secondary btn-sm py-1 px-2.5 small fw-semibold text-dark bg-white">
                 <i class="bi bi-pencil-square me-1 text-muted"></i>Editar Ranking
               </a>
             </div>
@@ -459,14 +542,17 @@
 
       <!-- Empty State Card -->
       <div class="custom-card p-5 text-center mx-auto" style="max-width: 650px;">
-        <div class="rounded-3 bg-brand-soft text-brand p-3 d-inline-flex align-items-center justify-content-center mb-3">
+        <div
+          class="rounded-3 bg-brand-soft text-brand p-3 d-inline-flex align-items-center justify-content-center mb-3">
           <i class="bi bi-inbox fs-3"></i>
         </div>
         <h4 class="h6 fw-bold text-dark mb-1">Nenhum rascunho pendente</h4>
         <p class="text-muted small mb-4" style="max-width: 420px; margin: 0 auto;">
-          Você não possui listas privadas em rascunho no momento. Inicie um novo ranking para catalogar seus discos favoritos.
+          Você não possui listas privadas em rascunho no momento. Inicie um novo ranking para catalogar seus discos
+          favoritos.
         </p>
-        <button type="button" class="btn btn-outline-secondary btn-sm px-3 py-2 fw-semibold" data-bs-toggle="modal" data-bs-target="#newRankingModal">
+        <button type="button" class="btn btn-outline-secondary btn-sm px-3 py-2 fw-semibold" data-bs-toggle="modal"
+          data-bs-target="#newRankingModal">
           <i class="bi bi-plus-lg me-1"></i>Criar Primeiro Rascunho
         </button>
       </div>
@@ -490,7 +576,8 @@
           <div class="modal-body p-4">
             <div class="mb-3">
               <label for="rankingName" class="form-label small fw-semibold text-secondary">Título do Ranking *</label>
-              <input type="text" class="form-control form-control-sm py-2" id="rankingName" placeholder="Ex: Top 20 Álbuns de Rock Progressivo" required>
+              <input type="text" class="form-control form-control-sm py-2" id="rankingName"
+                placeholder="Ex: Top 20 Álbuns de Rock Progressivo" required>
             </div>
             <div class="mb-3">
               <label for="rankingVisibility" class="form-label small fw-semibold text-secondary">Visibilidade</label>
@@ -500,8 +587,10 @@
               </select>
             </div>
             <div class="mb-3">
-              <label for="rankingDescription" class="form-label small fw-semibold text-secondary">Descrição / Critério de Avaliação</label>
-              <textarea class="form-control form-control-sm" id="rankingDescription" rows="3" placeholder="Critérios utilizados, contexto das audições ou referências..."></textarea>
+              <label for="rankingDescription" class="form-label small fw-semibold text-secondary">Descrição / Critério
+                de Avaliação</label>
+              <textarea class="form-control form-control-sm" id="rankingDescription" rows="3"
+                placeholder="Critérios utilizados, contexto das audições ou referências..."></textarea>
             </div>
           </div>
           <div class="modal-footer border-top border-light-subtle bg-light rounded-bottom-4">
@@ -536,4 +625,5 @@
   <!-- Bootstrap 5.3 Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

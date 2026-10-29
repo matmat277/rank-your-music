@@ -11,12 +11,12 @@
   --brand-teal-500: #2dd4bf;
   --brand-teal-200: #badfd6;
   --brand-teal-100: #dbeee9;
-  --brand-teal-50:  #f0f7f6;
-  --bg-canvas:       #f7faf9;
-  --card-border:     #e2e8f0;
-  --text-primary:    #0f172a;
-  --text-secondary:  #64748b;
-  --text-muted:      #94a3b8;
+  --brand-teal-50: #f0f7f6;
+  --bg-canvas: #f7faf9;
+  --card-border: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
 }
 
 body {
@@ -34,13 +34,16 @@ body {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f1f5f9;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
@@ -54,6 +57,7 @@ body {
   border-radius: 0.5rem;
   transition: all 0.2s ease-in-out;
 }
+
 .btn-brand:hover,
 .btn-brand:focus,
 .btn-brand:active {
@@ -71,6 +75,7 @@ body {
   border-radius: 0.5rem;
   transition: all 0.2s ease-in-out;
 }
+
 .btn-brand-outline:hover,
 .btn-brand-outline:focus,
 .btn-brand-outline:active {
@@ -83,12 +88,15 @@ body {
 .text-brand {
   color: var(--brand-teal-800) !important;
 }
+
 .bg-brand {
   background-color: var(--brand-teal-800) !important;
 }
+
 .bg-brand-soft {
   background-color: var(--brand-teal-50) !important;
 }
+
 .border-brand-subtle {
   border-color: var(--brand-teal-200) !important;
 }
@@ -112,6 +120,7 @@ body {
   font-weight: 600;
   position: relative;
 }
+
 .nav-link.active-custom::after {
   content: '';
   position: absolute;
@@ -131,6 +140,7 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
+
 .custom-card:hover {
   border-color: #cbd5e1;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
@@ -143,6 +153,7 @@ body {
   padding: 1.25rem;
   transition: all 0.2s ease-in-out;
 }
+
 .ranking-card:hover {
   border-color: #94a3b8;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
@@ -155,23 +166,25 @@ body {
   height: 48px;
   border-radius: 6px;
   object-fit: cover;
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
+
 .album-art-md {
   width: 58px;
   height: 58px;
   border-radius: 8px;
   object-fit: cover;
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
+
 .album-art-lg {
   width: 64px;
   height: 64px;
   border-radius: 10px;
   object-fit: cover;
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 
 /* Score Badges */
@@ -214,14 +227,17 @@ body {
   padding: 1rem 1.25rem;
   transition: all 0.15s ease-in-out;
 }
+
 .track-item:hover {
   border-color: #cbd5e1;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
 }
+
 .track-item.featured {
   border: 2px solid rgba(20, 184, 166, 0.5);
   background-color: rgba(240, 253, 250, 0.4);
 }
+
 .track-rank-number {
   font-size: 1.5rem;
   font-weight: 900;
@@ -240,6 +256,7 @@ body {
   border-bottom: 1px solid #f1f5f9;
   padding-bottom: 4px;
 }
+
 .chart-bar {
   flex: 1;
   border-radius: 4px 4px 0 0;
@@ -263,6 +280,7 @@ body {
   padding: 0.5rem 0.75rem;
   transition: all 0.15s ease;
 }
+
 .auth-nav-pills .nav-link.active {
   background-color: #ffffff;
   color: var(--text-primary);
